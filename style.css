@@ -19,11 +19,7 @@ body{
   margin:0;
   font-family:var(--sans);
   color:var(--text);
-  background:
-    radial-gradient(1000px 800px at 10% 10%, rgba(124,92,255,.23), transparent 60%),
-    radial-gradient(900px 700px at 90% 20%, rgba(0,200,255,.12), transparent 55%),
-    radial-gradient(900px 700px at 70% 90%, rgba(255,77,109,.12), transparent 50%),
-    var(--bg);
+  background: var(--bg);
 }
 
 .app{
@@ -268,6 +264,13 @@ body{
   cursor:pointer;
   user-select:none;
 }
+.playlist-item > div:first-child{
+  min-width: 0;
+  flex: 1 1 auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.playlist-item .pill{flex: 0 0 auto}
 .playlist-item:hover{background: rgba(255,255,255,.06)}
 .playlist-item[aria-selected="true"]{
   border-color: rgba(124,92,255,.55);
