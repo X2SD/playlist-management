@@ -109,7 +109,7 @@ body{
   left: 0;
   top: 0;
   bottom: 0;
-  width: min(380px, 92vw);
+  width: min(380px, 86vw);
   z-index: 20;
   padding:16px;
   overflow:auto;
@@ -121,6 +121,36 @@ body{
   pointer-events: none;
   transition: opacity .18s ease, transform .18s ease;
 }
+/* 抽屉头部：提供明显的关闭入口 */
+.sidebar__head{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  margin: -6px 0 12px;
+  padding: 8px 6px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: rgba(18, 24, 44, .96);
+  backdrop-filter: blur(8px);
+}
+.sidebar__title{
+  font-weight: 800;
+  color: rgba(255,255,255,.88);
+}
+.sidebar__close{
+  appearance:none;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.86);
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+  line-height: 1;
+}
+.sidebar__close:active{transform: translateY(1px)}
 body.sidebar-open .sidebar{
   transform: translateX(0);
   opacity: 1;

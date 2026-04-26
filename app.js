@@ -132,6 +132,7 @@ const els = {
   sidebar: document.getElementById("sidebar"),
   sidebarToggle: document.getElementById("sidebarToggle"),
   sidebarBackdrop: document.getElementById("sidebarBackdrop"),
+  sidebarClose: document.getElementById("sidebarClose"),
 
   libraryView: document.getElementById("libraryView"),
   weeklyView: document.getElementById("weeklyView"),
@@ -823,6 +824,9 @@ if (els.sidebarToggle) {
     const open = !document.body.classList.contains("sidebar-open");
     setSidebarOpen(open);
   });
+}
+if (els.sidebarClose) {
+  els.sidebarClose.addEventListener("click", () => setSidebarOpen(false));
 }
 if (els.sidebarBackdrop) {
   els.sidebarBackdrop.addEventListener("click", () => setSidebarOpen(false));
