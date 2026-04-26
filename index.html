@@ -120,10 +120,6 @@
           </div>
           <div class="dash-grid">
             <div class="dash-card">
-              <div class="dash-card__title">歌单占比</div>
-              <canvas id="chartPlaylists" height="220"></canvas>
-            </div>
-            <div class="dash-card">
               <div class="dash-card__title">Top 标签（柱状）</div>
               <canvas id="chartTopTags" height="220"></canvas>
             </div>
@@ -132,20 +128,25 @@
               <canvas id="chartTagRadar" height="220"></canvas>
             </div>
             <div class="dash-card">
-              <div class="dash-card__title">每周新增（期数）</div>
-              <canvas id="chartWeekly" height="220"></canvas>
-            </div>
-            <div class="dash-card">
-              <div class="dash-card__title">互动热度 Top（来自 songbot）</div>
+              <div class="dash-card__title">热度 Top（来自喵喵机器人）</div>
               <canvas id="chartHeatTop" height="220"></canvas>
+              <div id="heatNote" class="muted" style="margin-top:10px;font-size:12px"></div>
             </div>
             <div class="dash-card">
-              <div class="dash-card__title">评论 Top（来自 songbot）</div>
-              <canvas id="chartCommentsTop" height="220"></canvas>
+              <div class="dash-card__title">表情计分说明（来自喵喵机器人）</div>
+              <div id="emojiLegend" class="emoji-legend muted">未加载到表情数据</div>
+            </div>
+            <div class="dash-card dash-card--wide">
+              <div class="dash-card__title">评论（来自喵喵机器人）</div>
+              <div class="row row--wrap" style="margin-bottom:10px">
+                <input id="commentSearch" class="input" type="search" placeholder="搜索评论：歌名/歌手/评论/昵称" />
+                <button id="commentRefresh" class="btn btn--ghost" type="button">刷新随机两条</button>
+              </div>
+              <div id="commentList" class="comment-list muted">未加载到评论数据</div>
             </div>
           </div>
           <div class="muted" style="margin-top:12px; font-size:12px">
-            说明：可视化基于 `songs.json / tags.json / newsongs.json / songbot.json`。
+            说明：可视化基于 `songs.json / tags.json / songbot.json`（每周新增数据暂不做 OCR 解析）。
           </div>
         </div>
       </main>

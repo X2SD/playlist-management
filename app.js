@@ -128,12 +128,14 @@ const els = {
   dashboardView: document.getElementById("dashboardView"),
 
   dashboardSubtitle: document.getElementById("dashboardSubtitle"),
-  chartPlaylists: document.getElementById("chartPlaylists"),
   chartTopTags: document.getElementById("chartTopTags"),
   chartTagRadar: document.getElementById("chartTagRadar"),
-  chartWeekly: document.getElementById("chartWeekly"),
   chartHeatTop: document.getElementById("chartHeatTop"),
-  chartCommentsTop: document.getElementById("chartCommentsTop"),
+  heatNote: document.getElementById("heatNote"),
+  emojiLegend: document.getElementById("emojiLegend"),
+  commentSearch: document.getElementById("commentSearch"),
+  commentRefresh: document.getElementById("commentRefresh"),
+  commentList: document.getElementById("commentList"),
 
   weeklySubtitle: document.getElementById("weeklySubtitle"),
   weeklyGrid: document.getElementById("weeklyGrid"),
@@ -179,13 +181,11 @@ const state = {
   songbot: null,
   editingSongKey: null,
   charts: {
-    playlists: null,
     topTags: null,
     tagRadar: null,
-    weekly: null,
     heatTop: null,
-    commentsTop: null,
   },
+  commentNonce: 0,
 };
 
 function getSongTags(song) {
@@ -259,6 +259,7 @@ function normalizeSongbotPayload(p) {
     library: Array.isArray(p.library) ? p.library : [],
     reactions: Array.isArray(p.reactions) ? p.reactions : [],
     comments: Array.isArray(p.comments) ? p.comments : [],
+    emojiWeights: p.emojiWeights && typeof p.emojiWeights === "object" ? p.emojiWeights : null,
     version: p.version,
     source: p.source,
     generatedAt: p.generatedAt,
@@ -614,7 +615,8 @@ function computeSongbotHeatTop(limit = 12) {
     const artist = normalizeStr(r.artist);
     const k = `${name}\u0000${artist}`.toLowerCase();
     const cnt = Number(r.count ?? 0) || 0;
-    bySong.set(k, (bySong.get(k) ?? 0) + cnt);
+    const w = sb.emojiWeights ? Number(sb.emojiWeights[r.emojiId ?? r.emoji_unique_id ?? r.emoji_unique_id] ?? 1) : 1;
+    bySong.set(k, (bySong.get(k) ?? 0) + cnt * (Number.isFinite(w) ? w : 1));
   }
   return Array.from(bySong.entries())
     .map(([k, count]) => {
@@ -625,23 +627,27 @@ function computeSongbotHeatTop(limit = 12) {
     .slice(0, limit);
 }
 
-function computeSongbotCommentsTop(limit = 12) {
+function getSongbotEmojiSummary() {
   const sb = state.songbot;
   if (!sb) return [];
-  const bySong = new Map();
-  for (const c of sb.comments) {
-    const name = normalizeStr(c.name);
-    const artist = normalizeStr(c.artist);
-    const k = `${name}\u0000${artist}`.toLowerCase();
-    bySong.set(k, (bySong.get(k) ?? 0) + 1);
+  const weights = sb.emojiWeights || {};
+  const map = new Map(); // emojiKey -> {emoji, id, type, count}
+  for (const r of sb.reactions) {
+    const id = normalizeStr(r.emojiId || r.emoji_unique_id || r.emoji_unique_id);
+    const key = id || normalizeStr(r.emoji || "");
+    if (!key) continue;
+    const prev = map.get(key) || { id, emoji: normalizeStr(r.emoji) || id, type: normalizeStr(r.emojiType), count: 0 };
+    prev.count += Number(r.count ?? 0) || 0;
+    map.set(key, prev);
   }
-  return Array.from(bySong.entries())
-    .map(([k, count]) => {
-      const [name, artist] = k.split("\u0000");
-      return { label: `${name} — ${artist}`, count };
-    })
-    .sort((a, b) => b.count - a.count)
-    .slice(0, limit);
+  return Array.from(map.entries())
+    .map(([key, v]) => ({
+      key,
+      emoji: v.emoji,
+      count: v.count,
+      weight: Number(weights[key] ?? 1),
+    }))
+    .sort((a, b) => b.count * b.weight - a.count * a.weight);
 }
 
 function ensureChartJsReady() {
@@ -659,7 +665,7 @@ function renderDashboard() {
   const totalSongs = state.songs.length;
   const taggedSongs = state.songs.filter((s) => getSongTags(s).length > 0).length;
   const sb = state.songbot;
-  const sbText = sb ? ` · songbot：库 ${sb.library.length} / 互动 ${sb.reactions.length} / 评论 ${sb.comments.length}` : "";
+  const sbText = sb ? ` · 喵喵机器人：库 ${sb.library.length} / 表情记录 ${sb.reactions.length} / 评论 ${sb.comments.length}` : "";
   els.dashboardSubtitle.textContent = totalSongs
     ? `共 ${totalSongs} 首 · 已打标签 ${taggedSongs} 首${sbText}`
     : `请先导入 songs.txt 或生成 songs.json${sbText}`;
@@ -669,17 +675,6 @@ function renderDashboard() {
       if (state.view === "dashboard") renderDashboard();
     }, 250);
     return;
-  }
-
-  if (els.chartPlaylists) {
-    const labels = state.playlists.map((p) => p.name);
-    const data = state.playlists.map((p) => p.count);
-    destroyChart(state.charts.playlists);
-    state.charts.playlists = new window.Chart(els.chartPlaylists, {
-      type: "doughnut",
-      data: { labels, datasets: [{ data, borderWidth: 1 }] },
-      options: { responsive: true, plugins: { legend: { position: "bottom", labels: { color: "#d9ddff" } } } },
-    });
   }
 
   const top = getTopTags(12);
@@ -720,32 +715,12 @@ function renderDashboard() {
     });
   }
 
-  if (els.chartWeekly) {
-    const items = Array.isArray(state.weeklyImages) ? state.weeklyImages : [];
-    destroyChart(state.charts.weekly);
-    state.charts.weekly = new window.Chart(els.chartWeekly, {
-      type: "line",
-      data: {
-        labels: items.map((x) => formatDateLabel(x.date)).reverse(),
-        datasets: [{ label: "每期", data: items.map(() => 1).reverse(), tension: 0.25 }],
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" }, suggestedMax: 2 },
-        },
-      },
-    });
-  }
-
   if (els.chartHeatTop) {
     const heatTop = computeSongbotHeatTop(12);
     destroyChart(state.charts.heatTop);
     state.charts.heatTop = new window.Chart(els.chartHeatTop, {
       type: "bar",
-      data: { labels: heatTop.map((x) => x.label), datasets: [{ label: "互动次数", data: heatTop.map((x) => x.count) }] },
+      data: { labels: heatTop.map((x) => x.label), datasets: [{ label: "热度", data: heatTop.map((x) => x.count) }] },
       options: {
         responsive: true,
         plugins: { legend: { display: false } },
@@ -757,22 +732,89 @@ function renderDashboard() {
     });
   }
 
-  if (els.chartCommentsTop) {
-    const topC = computeSongbotCommentsTop(12);
-    destroyChart(state.charts.commentsTop);
-    state.charts.commentsTop = new window.Chart(els.chartCommentsTop, {
-      type: "bar",
-      data: { labels: topC.map((x) => x.label), datasets: [{ label: "评论数", data: topC.map((x) => x.count) }] },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-        },
-      },
-    });
+  if (els.heatNote) {
+    const hasWeights = Boolean(sb?.emojiWeights);
+    els.heatNote.textContent = hasWeights ? "热度 = Σ(表情次数 × 表情分数)" : "当前未提供表情分数：热度暂按“互动次数”计算";
   }
+
+  if (els.emojiLegend) {
+    const summary = getSongbotEmojiSummary().slice(0, 24);
+    if (!summary.length) {
+      els.emojiLegend.textContent = "暂无表情记录";
+    } else {
+      els.emojiLegend.classList.remove("muted");
+      els.emojiLegend.innerHTML = "";
+      const frag = document.createDocumentFragment();
+      for (const it of summary) {
+        const pill = document.createElement("span");
+        pill.className = "emoji-pill";
+        const points = it.count * (Number.isFinite(it.weight) ? it.weight : 1);
+        const info = document.createElement("span");
+        info.className = "emoji-pill__info";
+        info.textContent = "!";
+        info.title = `表情分数：${it.weight}\n总加分：${points}`;
+        pill.innerHTML = `<span>${escapeHtml(it.emoji)}</span><span class="emoji-pill__meta">×${it.count}</span>`;
+        pill.appendChild(info);
+        frag.appendChild(pill);
+      }
+      els.emojiLegend.appendChild(frag);
+    }
+  }
+
+  renderCommentsSection();
+}
+
+function renderCommentsSection() {
+  if (!els.commentList) return;
+  const sb = state.songbot;
+  const all = sb?.comments || [];
+
+  const q = normalizeStr(els.commentSearch?.value).toLowerCase();
+  const filtered = q
+    ? all.filter((c) => {
+        const name = normalizeStr(c.name);
+        const artist = normalizeStr(c.artist);
+        const text = normalizeStr(c.comment);
+        const nick = normalizeStr(c.nick) || "未知用户";
+        return `${name} ${artist} ${text} ${nick}`.toLowerCase().includes(q);
+      })
+    : all;
+
+  if (!filtered.length) {
+    els.commentList.textContent = all.length ? "没有匹配的评论" : "暂无评论数据（把导出的 songbot.json 放到站点根目录即可）";
+    els.commentList.classList.add("muted");
+    return;
+  }
+
+  // Random pick 2
+  const picks = [];
+  const n = Math.min(2, filtered.length);
+  // simple shuffle via random indices
+  const used = new Set();
+  while (picks.length < n) {
+    const idx = Math.floor(Math.random() * filtered.length);
+    if (used.has(idx)) continue;
+    used.add(idx);
+    picks.push(filtered[idx]);
+  }
+
+  els.commentList.classList.remove("muted");
+  els.commentList.innerHTML = "";
+  const frag = document.createDocumentFragment();
+  for (const c of picks) {
+    const card = document.createElement("div");
+    card.className = "comment-card";
+    const name = normalizeStr(c.name) || "（未知歌曲）";
+    const artist = normalizeStr(c.artist) || "（未知歌手）";
+    const nick = normalizeStr(c.nick) || "未知用户";
+    const text = normalizeStr(c.comment) || "";
+    card.innerHTML =
+      `<div class="comment-card__title">${escapeHtml(name)} — ${escapeHtml(artist)}</div>` +
+      `<div class="comment-card__text">${escapeHtml(text)}</div>` +
+      `<div class="comment-card__meta">— ${escapeHtml(nick)}</div>`;
+    frag.appendChild(card);
+  }
+  els.commentList.appendChild(frag);
 }
 
 async function readFileText(file) {
@@ -918,6 +960,19 @@ if (els.sortSelect) {
   els.sortSelect.addEventListener("change", (e) => {
     state.sort = e.target.value || "playlist:asc";
     renderAll();
+  });
+}
+
+if (els.commentSearch) {
+  els.commentSearch.addEventListener("input", () => {
+    if (state.view === "dashboard") renderCommentsSection();
+  });
+}
+
+if (els.commentRefresh) {
+  els.commentRefresh.addEventListener("click", () => {
+    state.commentNonce += 1;
+    if (state.view === "dashboard") renderCommentsSection();
   });
 }
 
