@@ -100,24 +100,7 @@ function uniqSorted(arr) {
   return Array.from(set).sort((a, b) => a.localeCompare(b, "zh-Hans-CN"));
 }
 
-function downloadText(filename, content, mime = "application/json;charset=utf-8") {
-  const blob = new Blob([content], { type: mime });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
-
 const els = {
-  fileInput: document.getElementById("fileInput"),
-  exportBtn: document.getElementById("exportBtn"),
-  importTagsInput: document.getElementById("importTagsInput"),
-  resetTagsBtn: document.getElementById("resetTagsBtn"),
-
   notice: document.getElementById("notice"),
   navLibrary: document.getElementById("navLibrary"),
   navWeekly: document.getElementById("navWeekly"),
@@ -133,7 +116,6 @@ const els = {
   chartAddWeek: document.getElementById("chartAddWeek"),
   chartHeatTop: document.getElementById("chartHeatTop"),
   heatNote: document.getElementById("heatNote"),
-  emojiLegend: document.getElementById("emojiLegend"),
   commentSearch: document.getElementById("commentSearch"),
   commentRefresh: document.getElementById("commentRefresh"),
   commentList: document.getElementById("commentList"),
@@ -467,10 +449,6 @@ function renderSongs() {
 }
 
 function enableUI() {
-  els.exportBtn.disabled = false;
-  els.importTagsInput.disabled = false;
-  els.importTagsInput.parentElement?.setAttribute("aria-disabled", "false");
-  els.resetTagsBtn.disabled = false;
   els.searchInput.disabled = false;
   els.onlyUntagged.disabled = false;
   if (els.sortSelect) els.sortSelect.disabled = false;
@@ -629,29 +607,6 @@ function computeSongbotHeatTop(limit = 12) {
     .slice(0, limit);
 }
 
-function getSongbotEmojiSummary() {
-  const sb = state.songbot;
-  if (!sb) return [];
-  const weights = sb.emojiWeights || {};
-  const map = new Map(); // emojiKey -> {emoji, id, type, count}
-  for (const r of sb.reactions) {
-    const id = normalizeStr(r.emojiId || r.emoji_unique_id || r.emoji_unique_id);
-    const key = id || normalizeStr(r.emoji || "");
-    if (!key) continue;
-    const prev = map.get(key) || { id, emoji: normalizeStr(r.emoji) || id, type: normalizeStr(r.emojiType), count: 0 };
-    prev.count += Number(r.count ?? 0) || 0;
-    map.set(key, prev);
-  }
-  return Array.from(map.entries())
-    .map(([key, v]) => ({
-      key,
-      emoji: v.emoji,
-      count: v.count,
-      weight: Number(weights[key] ?? 1),
-    }))
-    .sort((a, b) => b.count * b.weight - a.count * a.weight);
-}
-
 function ensureChartJsReady() {
   return typeof window.Chart !== "undefined";
 }
@@ -764,30 +719,6 @@ function renderDashboard() {
   if (els.heatNote) {
     const hasWeights = Boolean(sb?.emojiWeights);
     els.heatNote.textContent = hasWeights ? "热度 = Σ(表情次数 × 表情分数)" : "当前未提供表情分数：热度暂按“互动次数”计算";
-  }
-
-  if (els.emojiLegend) {
-    const summary = getSongbotEmojiSummary().slice(0, 24);
-    if (!summary.length) {
-      els.emojiLegend.textContent = "暂无表情记录";
-    } else {
-      els.emojiLegend.classList.remove("muted");
-      els.emojiLegend.innerHTML = "";
-      const frag = document.createDocumentFragment();
-      for (const it of summary) {
-        const pill = document.createElement("span");
-        pill.className = "emoji-pill";
-        const points = it.count * (Number.isFinite(it.weight) ? it.weight : 1);
-        const info = document.createElement("span");
-        info.className = "emoji-pill__info";
-        info.textContent = "!";
-        info.title = `表情分数：${it.weight}\n总加分：${points}`;
-        pill.innerHTML = `<span>${escapeHtml(it.emoji)}</span><span class="emoji-pill__meta">×${it.count}</span>`;
-        pill.appendChild(info);
-        frag.appendChild(pill);
-      }
-      els.emojiLegend.appendChild(frag);
-    }
   }
 
   renderCommentsSection();
@@ -956,25 +887,6 @@ if (els.navDashboard) {
   });
 }
 
-els.fileInput.addEventListener("change", async (e) => {
-  const file = e.target.files?.[0];
-  if (!file) return;
-
-  const text = await readFileText(file);
-  const songs = parseTSV(text);
-  state.songs = songs;
-  state.playlists = computePlaylists(songs);
-  state.selectedPlaylist = "__ALL__";
-  state.search = "";
-  state.onlyUntagged = false;
-  state.selectedGenres = new Set();
-
-  els.searchInput.value = "";
-  els.onlyUntagged.checked = false;
-  enableUI();
-  renderAll();
-});
-
 els.searchInput.addEventListener("input", (e) => {
   state.search = e.target.value ?? "";
   renderAll();
@@ -1004,43 +916,6 @@ if (els.commentRefresh) {
     if (state.view === "dashboard") renderCommentsSection();
   });
 }
-
-els.exportBtn.addEventListener("click", () => {
-  const payload = {
-    version: 1,
-    exportedAt: new Date().toISOString(),
-    tags: state.tagStore,
-  };
-  downloadText("tags.json", JSON.stringify(payload, null, 2));
-});
-
-els.importTagsInput.addEventListener("change", async (e) => {
-  const file = e.target.files?.[0];
-  if (!file) return;
-  try {
-    const raw = await readFileText(file);
-    const json = JSON.parse(raw);
-    const tags = json?.tags;
-    if (!tags || typeof tags !== "object") throw new Error("Invalid tags.json format");
-    state.tagStore = tags;
-    saveTagStore(state.tagStore);
-    renderAll();
-  } catch (err) {
-    window.alert(`导入失败：${err?.message ?? err}`);
-  } finally {
-    // allow re-import same file
-    e.target.value = "";
-  }
-});
-
-els.resetTagsBtn.addEventListener("click", () => {
-  const ok = window.confirm("确定清空本地标签？这不会影响 songs.txt，只会删除浏览器本地保存的标签。");
-  if (!ok) return;
-  state.tagStore = {};
-  saveTagStore(state.tagStore);
-  state.selectedGenres = new Set();
-  renderAll();
-});
 
 els.tagDialog.addEventListener("close", () => {
   // reset editing state to avoid accidental carry-over

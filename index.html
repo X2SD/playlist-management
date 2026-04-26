@@ -20,18 +20,7 @@
           <button id="navDashboard" class="nav__btn" type="button" aria-pressed="false">可视化</button>
         </nav>
 
-        <div class="topbar__actions">
-          <label class="btn">
-            导入 songs.txt
-            <input id="fileInput" class="sr-only" type="file" accept=".txt,.tsv,.csv" />
-          </label>
-          <button id="exportBtn" class="btn btn--ghost" type="button" disabled>导出标签 JSON</button>
-          <label class="btn btn--ghost" aria-disabled="true">
-            导入标签 JSON
-            <input id="importTagsInput" class="sr-only" type="file" accept=".json" disabled />
-          </label>
-          <button id="resetTagsBtn" class="btn btn--danger" type="button" disabled>清空本地标签</button>
-        </div>
+        <!-- 顶部操作区已移除：站点以静态数据为主 -->
       </header>
 
       <div id="notice" class="notice" hidden></div>
@@ -136,10 +125,6 @@
               <div class="dash-card__title">热度 Top（来自喵喵机器人）</div>
               <canvas id="chartHeatTop" height="220"></canvas>
               <div id="heatNote" class="muted" style="margin-top:10px;font-size:12px"></div>
-            </div>
-            <div class="dash-card">
-              <div class="dash-card__title">表情计分说明（来自喵喵机器人）</div>
-              <div id="emojiLegend" class="emoji-legend muted">未加载到表情数据</div>
             </div>
             <div class="dash-card dash-card--wide">
               <div class="dash-card__title">评论（来自喵喵机器人）</div>
