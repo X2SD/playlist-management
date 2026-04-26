@@ -1,0 +1,3738 @@
+{
+  "version": 1,
+  "generatedAt": "2026-04-26T13:39:25.385467+00:00",
+  "source": "song_rating.db",
+  "library": [
+    {
+      "name": "恢复测试",
+      "artist": "恢复歌手",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "temp"
+    },
+    {
+      "name": "ETERNAL♭",
+      "artist": "安野希世乃",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "temp"
+    },
+    {
+      "name": "测试歌曲",
+      "artist": "测试歌手",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "temp"
+    },
+    {
+      "name": "ひらひら ひらら【神楽七奈×千条アリア】（翻自 ClariS）",
+      "artist": "神楽七奈&千条アリア",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "temp"
+    },
+    {
+      "name": "私の裏側-other half-",
+      "artist": "桃梨",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "temp"
+    },
+    {
+      "name": "清理端口测试",
+      "artist": "测试歌手",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "最终测试",
+      "artist": "测试歌手",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Choose Your Fighter",
+      "artist": ": Ava Max",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "エルフ",
+      "artist": ": Ado",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "nobody cares",
+      "artist": ": 蔡徐坤",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Spotlight",
+      "artist": ": 蔡徐坤",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Pull Up",
+      "artist": ": 蔡徐坤",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Wait Wait Wait",
+      "artist": "蔡徐坤",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "迷",
+      "artist": "蔡徐坤",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "What a Day",
+      "artist": "蔡徐坤",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "red moon",
+      "artist": "Kalafina",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "«Дорогая моя женщина» (музыка и слова Валерий Мищук)",
+      "artist": "Various Artists",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Morning glow -Acoustic-",
+      "artist": "Heavenstamp",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "По долинам и по взгорьям",
+      "artist": "Piknik",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "เจอกับตัวเอง...ถึงรู้",
+      "artist": "Sara Nusara Poongprasert",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "그 남자의 거짓말",
+      "artist": "泰仁",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夜もすがら君想ふ (feat. 星乃一歌&天馬咲希&望月穂波&日野森志歩&鏡音リン)",
+      "artist": "Leo/need",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "願い～あの頃のキミへ～",
+      "artist": "當山みれい",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "THE HERO  ～怒れる拳に火をつけろ～",
+      "artist": "JAM Project",
+      "playlist": "暂存歌单",
+      "playlistNum": 5,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "非科学的表裏一体",
+      "artist": "豚乙女",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "流星雨",
+      "artist": "紫咲ほたる",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Bring it!",
+      "artist": "Tim Wynn",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "メグメグ☆ファイアーエンドレスナイト",
+      "artist": "花たん / プリコ / ヲタみん / ChouCho / 転少女",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Scarlet Fogbound",
+      "artist": "mican*",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "TRACER",
+      "artist": "Benjamin",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "with you",
+      "artist": "ClariS",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Spitfire",
+      "artist": "Go2",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Sacred world",
+      "artist": "RAISE A SUILEN",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Edel Lilie",
+      "artist": "一柳隊",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "ミスターフィクサー",
+      "artist": "Sou",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "違う、そうじゃない",
+      "artist": "鈴木雅之",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "ココロ",
+      "artist": "トラボルタP / 鏡音リン",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "メグメル",
+      "artist": "Riya",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "ダダダダ天使",
+      "artist": "ナナヲアカリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "晴天の兆し",
+      "artist": "片平里菜",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "CROSS ROAD (Remastered Ver.)",
+      "artist": "片平里菜",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "始まりに",
+      "artist": "片平里菜",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "オドループ",
+      "artist": "フレデリック",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Day After Day",
+      "artist": "FreQuency",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Mechanized Memories",
+      "artist": "星野康太",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "破滅の純情",
+      "artist": "ワルキューレ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "toge",
+      "artist": "あよ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "いらない",
+      "artist": "サカナクション",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "愛するたびに",
+      "artist": "片平里菜",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Autumn Night",
+      "artist": "Dept / Kelsey Kuan",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Sobrenatural",
+      "artist": "Juan Magan / Álvaro Soler / Marielle",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "絶対零度",
+      "artist": "なとり",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Catch me, if you can",
+      "artist": "UNIDOTS / 瑞葵(mizuki)",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "何なんですか？",
+      "artist": "shallm",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "転生願望",
+      "artist": "終活クラブ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Despiertos",
+      "artist": "Álvaro Soler",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "call your name",
+      "artist": "katagiri",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "JUST BELIEVE YOU",
+      "artist": "all at once",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Мой рай",
+      "artist": "JONY",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Sunday Afternoon",
+      "artist": "Roly Poly Rag Bear",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "ステンドノクターン",
+      "artist": "とあ / 初音ミク / 鏡音リン",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "芽吹くとき",
+      "artist": "yonige",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Poly Life Multi Soul",
+      "artist": "cero",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "You Need to Know",
+      "artist": "Axel Johansson",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Stupid Love",
+      "artist": "Jason Derulo",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "とまどい→レシピ",
+      "artist": "みかくにんぐッ！",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "outcry",
+      "artist": "あたらよ",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "夏風に溶ける feat. りりあ。, 南雲ゆうき",
+      "artist": "MAISONdes / りりあ。 / 南雲ゆうき",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Mirror",
+      "artist": "HoneyComeBear",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Midnight Call",
+      "artist": "ぜったくん / kojikoji",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Chrono Rewind (时空回溯)",
+      "artist": "†CVRCH†",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "YEAH",
+      "artist": "西野カナ",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "十夏の花",
+      "artist": "HoneyComeBear",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Growing Pains",
+      "artist": "Nathan Trent",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "My World (Blood Oath) (Tale Ver.)",
+      "artist": "铁痕电台-MSR / David Lin / Erik Castro",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Nobody",
+      "artist": "Anna of the North",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "薄紫色の彼方",
+      "artist": "RYUSENKEI",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "雨のシンデレラ",
+      "artist": "RYUSENKEI",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "TOKYO SNIPER",
+      "artist": "流線形",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "花びら",
+      "artist": "RYUSENKEI",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "恋のラストナンバー",
+      "artist": "RYUSENKEI",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "AIZO",
+      "artist": "King Gnu",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "lulu.",
+      "artist": "Mrs. GREEN APPLE",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "ray (超かぐや姫！ Version)",
+      "artist": "かぐや(cv.夏吉ゆうこ) / 月見ヤチヨ(cv.早見沙織)",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "セレナーデ",
+      "artist": "なとり",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "TEST ME",
+      "artist": "ちゃんみな",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "The Story of Us",
+      "artist": "milet",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "私は、わたしの事が好き。",
+      "artist": "HoneyWorks / かぐや(cv.夏吉ゆうこ)",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Cold Night",
+      "artist": "HANA",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Mine or Yours - From THE FIRST TAKE",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "恋風邪にのせて",
+      "artist": "Vaundy",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "mabataki",
+      "artist": "Vaundy",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "サンフェーデッド",
+      "artist": "初星学園, 篠澤 広",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Don't Look Back In Anger",
+      "artist": "Oasis",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "サニーボーイ・ラプソディ",
+      "artist": "toe",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "ビビデバ",
+      "artist": "星街すいせい",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Color Your Night",
+      "artist": "Chewie Melodies / Pealeaf",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "愛をこめて花束を",
+      "artist": "Superfly",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Fabulous",
+      "artist": "BLU-SWING",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Sunset",
+      "artist": "BLU-SWING",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Endless Journey",
+      "artist": "水瀬いのり / 久保ユリカ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "More One Night",
+      "artist": "久保ユリカ / 水瀬いのり",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "動く、動く",
+      "artist": "水瀬いのり / 久保ユリカ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "ハッピーラッキーチャッピー",
+      "artist": "ano",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "昼下がりの憂鬱",
+      "artist": "みかん箱 / Foxtail-Grass Studio",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "雲流れ",
+      "artist": "みかん箱 / Foxtail-Grass Studio",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Burning",
+      "artist": "羊文学",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Sunflower (feat. 夏背.)",
+      "artist": "Orangestar / 夏背",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "致以无名的抗争者",
+      "artist": "鸣潮先约电台 / jixwang / Thena A / Tarokiki / VISION SOUND",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "恋人失格",
+      "artist": "コレサワ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "献给你的荆棘之歌(feat. 本墨置子)",
+      "artist": "游戏脉冲 / 本墨置子",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "Sealed",
+      "artist": "塞壬唱片-MSR / Talyr Renee / Erik Castro / David Lin",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "Here With Me",
+      "artist": "Marshmello / CHVRCHES",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "Never Say Die",
+      "artist": "CHVRCHES",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "Nightmares",
+      "artist": "CHVRCHES",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "Woods",
+      "artist": "Magnolian",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "Cliffhanger",
+      "artist": "Grimm Grimm",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "Hope feat. Denise Sherwood",
+      "artist": "Silent Poets",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "またたく間に",
+      "artist": "Koi no Koe",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "再見仙杜瑞拉",
+      "artist": "Crest",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "小石DISCO(feat. 本墨置子)",
+      "artist": "游戏脉冲 / 本墨置子",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W13"
+    },
+    {
+      "name": "夜桜街道 (instrumental)",
+      "artist": "舞風",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "キラキラの灰",
+      "artist": "リーガルリリー",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "more than words",
+      "artist": "羊文学",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "造花であろうとした者",
+      "artist": "森永真由美",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "時をかける神様",
+      "artist": "Foxtail-Grass Studio",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Eversleeping",
+      "artist": "Xandria",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Awake",
+      "artist": "岩崎琢",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "カレンデュラ レクイエム",
+      "artist": "kanon×kanon",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "靴の音を、響かせて、その手を",
+      "artist": "めらみぽっぷ",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Yell! -little girl's secret-",
+      "artist": "喜多村英梨",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "暁の車",
+      "artist": "FictionJunction / 南里侑香",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "桜のような恋でした -featuring ceui-",
+      "artist": "samfree",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "my long forgotten cloistered sleep (unreleased work of Xenosaga)",
+      "artist": "Emily Bindiger",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Town of Windmill",
+      "artist": "a_hisa",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "白雪姫",
+      "artist": "Flower",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Purple Passion",
+      "artist": "Diana Boncheva",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "綺麗で儚いもの",
+      "artist": "Aquaplus",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Flower Dance",
+      "artist": "DJ Okawari",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "奏",
+      "artist": "スキマスイッチ",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "オーバー",
+      "artist": "riya",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "MEMORIA",
+      "artist": "藍井エイル",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "boy's own",
+      "artist": "牛尾憲輔",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "hearts get closer",
+      "artist": "牛尾憲輔",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "it begins",
+      "artist": "牛尾憲輔",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "a slice of peach",
+      "artist": "牛尾憲輔",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Space Lion",
+      "artist": "菅野よう子",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "is",
+      "artist": "菅野よう子 / POP ETC",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Waltz For Zizi",
+      "artist": "菅野よう子",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Cats on Mars",
+      "artist": "菅野よう子",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "She Said",
+      "artist": "菅野よう子",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "norway",
+      "artist": "菅野よう子",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ナイト・オブ・ナイツ",
+      "artist": "ビートまりお",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "贄-nie-",
+      "artist": "吉乃",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "あいぞめ",
+      "artist": "能登麻美子",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "タイムイズマイン (feat. 重音テト&初音ミク)",
+      "artist": "真島ゆろ / 重音テト",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "T氏の話を信じるな (feat. 初音ミク & 重音テト)",
+      "artist": "ピノキオピー / 初音ミク / 重音テト",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "まにまに",
+      "artist": "r-906 / 初音ミク",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "blue hour",
+      "artist": "iri",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Wonderland",
+      "artist": "iri",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "タイニーリトル・アジアンタム",
+      "artist": "3L",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "魔法使いの夜～メインテーマ",
+      "artist": "深澤秀行",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "星が瞬くこんな夜に ~ゲームVer.~",
+      "artist": "supercell",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "告白",
+      "artist": "supercell",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "アレルヤ",
+      "artist": "Kalafina",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "heavenly blue",
+      "artist": "Kalafina",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "満天",
+      "artist": "Kalafina",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "桜流し",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "BADモード",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Time",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夕凪",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "PINK BLOOD",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "DISTANCE",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "First Love",
+      "artist": "宇多田ヒカル",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ひとりじゃないんだ",
+      "artist": "こはならむ",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "The Snowman That Won't Melt",
+      "artist": "Koi no Koe",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "I Know Your Heart",
+      "artist": "Koi no Koe",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "さよならスマイル",
+      "artist": "kobasolo / 杏沙子",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "唯我独尊の果て",
+      "artist": "幽閉サテライト / sroa",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "HELP!!",
+      "artist": "Kobo Kanaeru",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "コンパクトミラー",
+      "artist": "kiwano",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ハオ",
+      "artist": "DECO*27",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "証命讃歌",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "远航星的告别",
+      "artist": "鸣潮先约电台 / jixwang / Tarokiki / Emi Evans",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Operation Blade",
+      "artist": "塞壬唱片-MSR / 陈雪燃",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Don't Be So Serious",
+      "artist": "Low Roar",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "I Believe In Us (Arknights Soundtrack)",
+      "artist": "Reigan",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Running In The Dark",
+      "artist": "MONKEY MAJIK / 塞壬唱片-MSR",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "BB's Theme",
+      "artist": "Ludvig Forssell / Jenny Plant",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Any Love of Any Kind feat. Bryce Dessner",
+      "artist": "Woodkid / Bryce Dessner",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "To the wilder (from \"DEATH STRANDING 2 : ON THE BEACH\" Soundtrack)",
+      "artist": "Woodkid",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M8",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M6",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M3",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M4",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M02",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M01",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M41+42",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M44",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M38+39",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "M22",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "海愿",
+      "artist": "塞壬唱片-MSR / Eagle Wei",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "铁花飞",
+      "artist": "Mili / 塞壬唱片-MSR",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "心臓と絡繰",
+      "artist": "花譜",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "悖徳数列組曲 (x≒y)",
+      "artist": "夕月椿",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "鳥よ",
+      "artist": "nayuta",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "紅一葉",
+      "artist": "黒うさP / めらみぽっぷ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Flyway (feat. 星乃一歌&天馬咲希&望月穂波&日野森志歩&鏡音レン)",
+      "artist": "Leo/need",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "パラソルサイダー (feat. 花里みのり&桐谷遥&桃井愛莉&日野森雫&巡音ルカ)",
+      "artist": "MORE MORE JUMP！",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Beat Eater (feat. 小豆沢こはね&白石杏&東雲彰人&青柳冬弥&鏡音レン)",
+      "artist": "ポリスピカデリー / Vivid BAD SQUAD / 鏡音レン",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "セカイはまだ始まってすらいない (feat. 天馬司&鳳えむ&草薙寧々&神代類&初音ミク)",
+      "artist": "ピノキオピー / ワンダーランズ×ショウタイム / 初音ミク",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ワンスアポンアドリーム (feat. 天馬司&鳳えむ&草薙寧々&神代類&鏡音レン)",
+      "artist": "YASUHIRO / ワンダーランズ×ショウタイム / 鏡音レン",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "星空のメロディー (feat. 天馬司&鳳えむ&草薙寧々&神代類&MEIKO)",
+      "artist": "ワンダーランズ×ショウタイム",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "お気に召すまま (feat. 天馬司&鳳えむ&草薙寧々&神代類&鏡音レン)",
+      "artist": "Eve / ワンダーランズ×ショウタイム / 鏡音レン",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "月齢11.3のキャンドルマジック(LAZ Remix)",
+      "artist": "3L / Laz",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Horizon Dreamer",
+      "artist": "三浦大知",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ポジティブ☆ダンスタイム (feat. ハピネス戦隊サニサニ☆ワンダー,鏡音リン) (Game size.)",
+      "artist": "鏡音リン / 木野日菜 / 吉岡茉祐 / 秋奈 / 田辺留依 / キノシタ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ワーワーワールド (feat. 花里みのり&小豆沢こはね&初音ミク)",
+      "artist": "Mitchie M / ギガP / プロジェクトセカイ / 初音ミク",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "てらてら (feat. 星乃一歌&天馬咲希&望月穂波&日野森志歩&初音ミク)",
+      "artist": "Leo/need",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Long shot",
+      "artist": "前島麻由",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Apologize",
+      "artist": "Timbaland / OneRepublic",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "遺サレタ場所/遮光",
+      "artist": "岡部啓一",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "遊園施設",
+      "artist": "帆足圭吾",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "愚カシイ兵器:乙:甲",
+      "artist": "岡部啓一",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Fragmented World",
+      "artist": "Funton",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "旅",
+      "artist": "VISUAL ARTS / Key",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Farewell",
+      "artist": "十指流玉",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ベルベットの祈り Velvet no inori [主题歌]",
+      "artist": "梶浦由記",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "顕現シタ異物",
+      "artist": "岡部啓一 / 帆足圭吾",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "穿越",
+      "artist": "墨明棋妙",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Farewell (Piano Solo)",
+      "artist": "十指流玉",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Saika",
+      "artist": "RABPIT",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Lifeline",
+      "artist": "Zeraphym 六翼使徒",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Annabelle",
+      "artist": "Pianoboy高至豪",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "荀彧(纯音乐版)",
+      "artist": "曾经艺也",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Re-awake",
+      "artist": "阿保剛",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Life is a Journey",
+      "artist": "Piano Master",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夏恋",
+      "artist": "Otokaze",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "BLISS",
+      "artist": "Ken Arai",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "儚き人の为のカンタータ(off vocal)",
+      "artist": "はちみつれもん",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Gate of Steiner -Main Theme-",
+      "artist": "阿保剛",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Believe Me",
+      "artist": "阿保剛",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "NEXT TO YOU",
+      "artist": "Ken Arai",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Luv Letter (Wisp X Remix)",
+      "artist": "Wisp X / DJ Okawari",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "广寒宫",
+      "artist": "丸子呦",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "深渊的等待",
+      "artist": "刘惜君",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "「寄明月」(国风舞曲) (Cover SING女团 / 乐正绫)",
+      "artist": "泠鸢yousa / 三无MarBlue",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "千年辗转",
+      "artist": "litterzy / 洛天依Official",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "星屑",
+      "artist": "FictionJunction",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "パノラマ蓝色写真",
+      "artist": "高桥菜菜",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Close Your Eyes",
+      "artist": "彩音",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Light Colors",
+      "artist": "Lia",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ひらひら ひらら",
+      "artist": "ClariS",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "光の旋律 (TV ver.)",
+      "artist": "Kalafina",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夏影 ～あの飛行機雲を越えた、その先へ～ (nostalgia mix)",
+      "artist": "雪桜草",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Memento",
+      "artist": "nonoc",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Realize",
+      "artist": "鈴木このみ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Another Story",
+      "artist": "雪桜草",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "-影二つ-",
+      "artist": "riya",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "星の奏でる歌 (Duet Ver.)",
+      "artist": "花澤香菜 / 潘めぐみ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ただ流るるままに",
+      "artist": "彩音",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "冷たい部屋、一人",
+      "artist": "小松未可子",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "そしていつかまた出逢って　～ Eternal Flower",
+      "artist": "めらみぽっぷ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Hacking to the Gate",
+      "artist": "いとうかなこ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "スカイクラッドの観測者",
+      "artist": "いとうかなこ",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "镇命歌 -しずめうた-",
+      "artist": "瀧沢一留",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "斎唄-いわいうた- full version",
+      "artist": "瀧沢一留",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "LIFE",
+      "artist": "Neuro-sama",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "inside you",
+      "artist": "milet",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "world.execute (me) ;",
+      "artist": "Mili",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "相别",
+      "artist": "The 1999",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Through Patches of Violet",
+      "artist": "Mili",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Children of the City",
+      "artist": "Mili",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Gone Angels",
+      "artist": "Mili",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Fly, My Wings",
+      "artist": "Mili",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "What the Ripple Sees",
+      "artist": "Mili",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Merry-Go-Round",
+      "artist": "久石譲",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Blueming",
+      "artist": "IU",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "勾指起誓",
+      "artist": "洛天依 / ilem",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "暗恋人类日记",
+      "artist": "Bo Peep / 洛天依",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ワンルームシュガーライフ",
+      "artist": "ナナヲアカリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ムリムリ進化論",
+      "artist": "七音阿卡莉",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ワタシノミカタ (feat. Hanon & Kotoha)",
+      "artist": "HoneyWorks / Kotoha / Hanon",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "チューニング",
+      "artist": "夢限大みゅーたいぷ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Just Communication",
+      "artist": "TWO-MIX",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "言っちゃいけないことばっか浮かぶよな",
+      "artist": "Guiano / 理芽",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "17",
+      "artist": "椎名林檎",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "薄ら氷心中",
+      "artist": "椎名林檎",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "My Time",
+      "artist": "OMOCAT, LLC.",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "STAR BEAT!～ホシノコドウ～",
+      "artist": "Poppin'Party",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "新しい季節に",
+      "artist": "Poppin'Party",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Tell me",
+      "artist": "milet",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ENDLESS RAIN",
+      "artist": "X JAPAN",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ハッピーシンセサイザ (feat. 花里みのり&桐谷遥&桃井愛莉&日野森雫)",
+      "artist": "EasyPop / MORE MORE JUMP！",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "マジック・メイド (feat. 重音テト)",
+      "artist": "MIMI / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "サイエンス (feat. 重音テト)",
+      "artist": "MIMI / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Stand Out Fit In",
+      "artist": "ONE OK ROCK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "In The Stars",
+      "artist": "ONE OK ROCK / Kiiara",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Giants",
+      "artist": "ONE OK ROCK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "We are",
+      "artist": "ONE OK ROCK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "This Can't Be Us",
+      "artist": "ONE OK ROCK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Departures -memory- (From \"Departures\" Soundtrack)",
+      "artist": "久石譲",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "你永远住在我万分绮丽的梦里(Time is unforgiving)",
+      "artist": "果然乐队",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "此刻，我们应该坐在年轻的海岸上",
+      "artist": "G2er",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "千金胧梦",
+      "artist": "洛天依Official",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "万能诊听器",
+      "artist": "Z新豪 / 洛天依Official",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "亲爱的",
+      "artist": "洛天依 / 阿良良木健",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "いつもシミュレーション",
+      "artist": "Guiano / 理芽",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ARCADIA",
+      "artist": "ヰ世界情緒",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ノンブレス・オブリージュ (feat. 宵崎奏&朝比奈まふゆ&東雲絵名&暁山瑞希&初音ミク)",
+      "artist": "25時、ナイトコードで。 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "私は雨 (feat. 宵崎奏&朝比奈まふゆ&東雲絵名&暁山瑞希&鏡音レン)",
+      "artist": "25時、ナイトコードで。",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "トリコロージュ (feat. 宵崎奏&朝比奈まふゆ&東雲絵名&暁山瑞希&初音ミク)",
+      "artist": "25時、ナイトコードで。",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "メリュー (feat. 宵崎奏&朝比奈まふゆ&初音ミク)",
+      "artist": "25時、ナイトコードで。 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "アイデンティティ (feat. 宵崎奏 & 初音ミク)",
+      "artist": "kanaria / 25時、ナイトコードで。 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "カナデトモスソラ (feat. 宵崎奏&朝比奈まふゆ&東雲絵名&暁山瑞希&巡音ルカ)",
+      "artist": "ササノマリイ / ねこぼーろ / 25時、ナイトコードで。 / 巡音ルカ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "25時の情熱 (feat. 宵崎奏&朝比奈まふゆ&東雲絵名&暁山瑞希&KAITO)",
+      "artist": "25時、ナイトコードで。",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "自傷無色 (feat. 宵崎奏, 朝比奈まふゆ & 初音ミク)",
+      "artist": "ササノマリイ / 25時、ナイトコードで。 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "礎の花冠",
+      "artist": "Roselia",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "VIOLET LINE",
+      "artist": "Roselia",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "R",
+      "artist": "Roselia",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "エトセトラ",
+      "artist": "ONE OK ROCK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Wherever you are",
+      "artist": "ONE OK ROCK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "1/6 -out of the gravity-",
+      "artist": "ぼーかりおどP / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "君がいない毎日 (合唱)",
+      "artist": "洛天依Official / 兔兔.D.路西",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Снег",
+      "artist": "Александр Городницкий",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Tiny Giant 小巨星",
+      "artist": "三Z-STUDIO / HOYO-MiX / Ashley Alisha",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Je te pardonne",
+      "artist": "GIMS / Sia",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Ой, да не вечер…",
+      "artist": "Piknik",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Toi + moi",
+      "artist": "Kids United",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Hope of Morning",
+      "artist": "Icon For Hire",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "The Drum",
+      "artist": "Alan Walker",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "pride (sped up)",
+      "artist": "SLXUGHTER",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "22才の別れ",
+      "artist": "柴田淳",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "7년간의 사랑",
+      "artist": "金贤政",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Way Back Home",
+      "artist": "SHAUN",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "닫힌 엔딩 (Closed Ending)",
+      "artist": "SHAUN",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "渡口",
+      "artist": "蔡琴",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "春天的芭蕾",
+      "artist": "常思思",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "失礼しますが、RIP♡",
+      "artist": "森カリオペ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Q",
+      "artist": "椎名もた / 鏡音リン",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ありがとうあなた",
+      "artist": "山口百恵",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "モエチャッカファイア",
+      "artist": "若山詩音",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "死別",
+      "artist": "シャノン",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夢と葉桜",
+      "artist": "初音ミク / 青木月光",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "星座になれたら",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ギターと孤独と蒼い惑星",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "カラカラ",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "天使にふれたよ!",
+      "artist": "放課後ティータイム",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ふわふわ時間",
+      "artist": "放課後ティータイム",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "影色舞",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "壱雫空",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "栞",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "春日影",
+      "artist": "CRYCHIC",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "春日影(MyGO!!!!! ver.)",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ツギハギスタッカート",
+      "artist": "とあ / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "青い春と西の空",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "光の中へ",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ワタシダケユウレイ",
+      "artist": "SICK HACK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "フラッシュバッカー",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "小さな海",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ラブソングが歌えない",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ひみつ基地",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "転がる岩、君に朝が降る",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "忘れてやらない",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "なにが悪い",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "あのバンド",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ひとりぼっち東京",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Distortion!!",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "青春コンプレックス",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "今、僕、アンダーグラウンドから",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "月並みに輝け",
+      "artist": "結束バンド",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "空の箱 (井芹仁菜、河原木桃香)",
+      "artist": "トゲナシトゲアリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "雑踏、僕らの街",
+      "artist": "トゲナシトゲアリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "蝶に結いた赤い糸",
+      "artist": "トゲナシトゲアリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "傷つき傷つけ痛くて辛い",
+      "artist": "トゲナシトゲアリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "空白とカタルシス",
+      "artist": "トゲナシトゲアリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "運命の華",
+      "artist": "トゲナシトゲアリ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Cagayake!GIRLS",
+      "artist": "桜高軽音部",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Don't say \"lazy\" [5人Ver.]",
+      "artist": "放課後ティータイム",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "わたしの恋はホッチキス",
+      "artist": "放課後ティータイム",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Ave Mujica",
+      "artist": "Ave Mujica",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "顔",
+      "artist": "Ave Mujica",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "KiLLKiSS",
+      "artist": "Ave Mujica",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Georgette Me, Georgette You",
+      "artist": "Ave Mujica",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Imprisoned XII",
+      "artist": "Ave Mujica",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Crucifix X",
+      "artist": "Ave Mujica",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "迷星叫",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "碧天伴走",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "詩超絆",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "歌いましょう鳴らしましょう",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "猛独が襲う (Cover)",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "人間になりたいうた",
+      "artist": "CRYCHIC",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "焚音打",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "歩拾道",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "端程山",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "輪符雨",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "孤壊牢",
+      "artist": "MyGO!!!!!",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夢の中へ",
+      "artist": "RageSpeak / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ネコソギマターバップ",
+      "artist": "sasakure.UK / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ヒットメーカー (feat. 重音テト)",
+      "artist": "夜未アガリ / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ちっちゃな私",
+      "artist": "重音テト / マサラダ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "バベル",
+      "artist": "いよわ / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "散り散り",
+      "artist": "読谷あかね / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "泣けど喚けど朝がきて",
+      "artist": "12uck / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "吉原ラメント 再来盤",
+      "artist": "亜沙",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夏末递归定义",
+      "artist": "AnonP / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ミィハー",
+      "artist": "Chinozo / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "黒塗り世界宛て書簡",
+      "artist": "フロクロ / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ただ選択があった",
+      "artist": "フロクロ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "オーバーライド",
+      "artist": "吉田夜世",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Liar Dancer",
+      "artist": "重音テト / マサラダ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "殻空",
+      "artist": "溝野あわ / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "だめにんげんだ! (feat. 重音テト)",
+      "artist": "薄塩指数 / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "反省はしていない、そして後悔もしていない。",
+      "artist": "青谷 / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "アリババ",
+      "artist": "柊キライ / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ゴースト・ライト",
+      "artist": "sasakure.UK / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "右に曲ガール",
+      "artist": "はるふり / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "スタグフレーションガール (feat. 重音テト)",
+      "artist": "Adeliae / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "無傷",
+      "artist": "水槽 / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "失踪前夜",
+      "artist": "香椎モイミ / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ソレム (feat. 重音テト)",
+      "artist": "Twinfield / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "イガク",
+      "artist": "原口沙輔",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "働いても",
+      "artist": "ザビャン / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ロスト・デリュージョン",
+      "artist": "フロクロ / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "明正ロマン",
+      "artist": "亜沙 / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Machine Love",
+      "artist": "Jamie Paige",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ミニ偏 feat. 重音テト",
+      "artist": "原口沙輔 / 重音テト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "プラリネ",
+      "artist": "かしこ。 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "腳邊的芒果",
+      "artist": "初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "うみたがり",
+      "artist": "MARETU / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "オノマトペメガネ",
+      "artist": "ねこぼーろ / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "からくりピエロ",
+      "artist": "40mP / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Rabbit",
+      "artist": "john / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "1000年生きてる",
+      "artist": "いよわ / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "春嵐",
+      "artist": "john / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "独りんぼエンヴィー",
+      "artist": "koyori / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "妄想税",
+      "artist": "DECO*27 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "アンノウン・マザーグース",
+      "artist": "wowaka / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "帝国少女",
+      "artist": "初音ミク / R Sound Design",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ローリンガール",
+      "artist": "wowaka / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "砂の惑星",
+      "artist": "米津玄師 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "転生林檎",
+      "artist": "ピノキオピー / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ビターチョコデコレーション",
+      "artist": "syudou / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "乙女解剖",
+      "artist": "DECO*27 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ダーリンダンス",
+      "artist": "かいりきベア / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "おじゃま虫",
+      "artist": "DECO*27 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ヴァンパイア",
+      "artist": "DECO*27 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "裏表ラバーズ",
+      "artist": "wowaka / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ヒバナ",
+      "artist": "DECO*27 / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ラヴィット",
+      "artist": "ピノキオピー / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "カトラリー",
+      "artist": "初音ミク / 神山羊",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "神っぽいな",
+      "artist": "ピノキオピー / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ホワイトハッピー",
+      "artist": "MARETU / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "恋愛裁判",
+      "artist": "40mP / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ダーリン",
+      "artist": "MARETU / 初音ミク",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "私は、私達は",
+      "artist": "Guiano / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夜伽話",
+      "artist": "可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "不埒な喝采",
+      "artist": "可不 / ポリスピカデリー",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ハナタバ",
+      "artist": "MIMI / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ジェラシス",
+      "artist": "可不 / Chinozo",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ヒミツ (feat. 可不)",
+      "artist": "MIMI / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "化孵化",
+      "artist": "可不 / sasakure.UK",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "クィホーティ",
+      "artist": "エイハブ / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "今はいいんだよ。 (feat. 可不)",
+      "artist": "MIMI / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "空を満たして (feat. 可不)",
+      "artist": "フロクロ / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "マーシャル・マキシマイザー",
+      "artist": "可不 / 柊マグネタイト",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "いっせーのーで",
+      "artist": "MIMI / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "きゅうくらりん",
+      "artist": "いよわ / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "オマジナイ",
+      "artist": "MIMI / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "タクシィ",
+      "artist": "Chinozo",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "愛するように",
+      "artist": "MIMI / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "チーズ",
+      "artist": "Chinozo / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "もっとかわいい",
+      "artist": "才歌 / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "Dull!! (feat. 可不)",
+      "artist": "飽海 / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ストックホルムオフィス",
+      "artist": "クラム / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "戻るボタン",
+      "artist": "なみぐる / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "ひみつのユーフォー",
+      "artist": "ナユタン星人 / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "脆弱性",
+      "artist": "にほしか",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "キャットラビング",
+      "artist": "香椎モイミ / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "明日が来るのが怖くてさ (feat. 可不)",
+      "artist": "さくらかわ / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "フォニイ",
+      "artist": "可不 / ツミキ",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "CH4NGE (feat. 可不)",
+      "artist": "ギガP / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "サヨナラは言わないでさ (feat. 可不)",
+      "artist": "MIMI / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "夜の自販機",
+      "artist": "可不 / にほしか",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "流線形メーデー",
+      "artist": "花譜 / 可不",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W12"
+    },
+    {
+      "name": "黄龄 / HOYO",
+      "artist": "MiX",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Mili / 塞壬唱片",
+      "artist": "MSR",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "twenty4",
+      "artist": "7",
+      "playlist": "歌单1",
+      "playlistNum": 1,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Ms_",
+      "artist": "A",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "From THE FIRST TAKE",
+      "artist": "milet",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "mol",
+      "artist": "74",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "n",
+      "artist": "buna / 初音ミク",
+      "playlist": "歌单2",
+      "playlistNum": 2,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "KANA",
+      "artist": "BOON",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Main Live Day 1)",
+      "artist": "halca / 幹葉",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "miu",
+      "artist": "clips",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "めありー / jon",
+      "artist": "YAKITORY",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "试听版",
+      "artist": "ReoNa",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "试听版",
+      "artist": "藍井エイル",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "またね",
+      "artist": "HoneyComeBear",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Furumachi -",
+      "artist": "星猫音楽",
+      "playlist": "歌单3",
+      "playlistNum": 3,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "HOYO",
+      "artist": "MiX",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Generation Full ver.",
+      "artist": "sound sepher",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "Orchestral Version [from \"Attack on Titan Season 4\"] (Cover)",
+      "artist": "Samuel Kim",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "陈致逸 / HOYO",
+      "artist": "MiX",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "C",
+      "artist": "CLAYS",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    },
+    {
+      "name": "n",
+      "artist": "buna / GUMI",
+      "playlist": "歌单4",
+      "playlistNum": 4,
+      "addWeek": "2026W17"
+    }
+  ],
+  "reactions": [
+    {
+      "name": "愛唄",
+      "artist": "石見舞菜香",
+      "emojiId": "unicode_emoji_",
+      "emoji": "",
+      "emojiType": "unicode_emoji",
+      "count": 5,
+      "updatedAt": "2026-03-23 03:54:02"
+    },
+    {
+      "name": "The Reluctant Heroes",
+      "artist": "澤野弘之 / mpi",
+      "emojiId": "qq_face_76",
+      "emoji": "[QQ表情:76]",
+      "emojiType": "qq_face",
+      "count": 2,
+      "updatedAt": "2026-03-23 04:16:04"
+    },
+    {
+      "name": "The Reluctant Heroes",
+      "artist": "澤野弘之 / mpi",
+      "emojiId": "qq_face_63",
+      "emoji": "[QQ表情:63]",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:23:16"
+    },
+    {
+      "name": "夕焼けサンディブラウン",
+      "artist": "多田葵",
+      "emojiId": "qq_face_76",
+      "emoji": "太阳",
+      "emojiType": "qq_face",
+      "count": 3,
+      "updatedAt": "2026-03-23 04:43:41"
+    },
+    {
+      "name": "夕焼けサンディブラウン",
+      "artist": "多田葵",
+      "emojiId": "qq_face_282",
+      "emoji": "[QQ表情:282]",
+      "emojiType": "qq_face",
+      "count": 2,
+      "updatedAt": "2026-03-23 04:39:05"
+    },
+    {
+      "name": "夕焼けサンディブラウン",
+      "artist": "多田葵",
+      "emojiId": "qq_face_66",
+      "emoji": "爱心",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:38:24"
+    },
+    {
+      "name": "夕焼けサンディブラウン",
+      "artist": "多田葵",
+      "emojiId": "qq_face_318",
+      "emoji": "[QQ表情:318]",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:38:29"
+    },
+    {
+      "name": "夕焼けサンディブラウン",
+      "artist": "多田葵",
+      "emojiId": "qq_face_63",
+      "emoji": "玫瑰",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:39:07"
+    },
+    {
+      "name": "いかないで",
+      "artist": "徳永英明",
+      "emojiId": "qq_face_76",
+      "emoji": "太阳",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:40:24"
+    },
+    {
+      "name": "いかないで",
+      "artist": "徳永英明",
+      "emojiId": "qq_face_63",
+      "emoji": "玫瑰",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:40:26"
+    },
+    {
+      "name": "いかないで",
+      "artist": "徳永英明",
+      "emojiId": "qq_face_38",
+      "emoji": "敲打",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:40:31"
+    },
+    {
+      "name": "Nightmares",
+      "artist": "CHVRCHES",
+      "emojiId": "qq_face_76",
+      "emoji": "太阳",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:45:40"
+    },
+    {
+      "name": "Nightmares",
+      "artist": "CHVRCHES",
+      "emojiId": "qq_face_66",
+      "emoji": "爱心",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:45:44"
+    },
+    {
+      "name": "Nightmares",
+      "artist": "CHVRCHES",
+      "emojiId": "qq_face_318",
+      "emoji": "[QQ表情:318]",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 04:45:50"
+    },
+    {
+      "name": "Nightmares",
+      "artist": "CHVRCHES",
+      "emojiId": "qq_face_319",
+      "emoji": "[QQ表情:319]",
+      "emojiType": "qq_face",
+      "count": 1,
+      "updatedAt": "2026-03-23 05:16:36"
+    },
+    {
+      "name": "a slice of peach",
+      "artist": "牛尾憲輔",
+      "emojiId": "qq_face_76",
+      "emoji": "太阳",
+      "emojiType": "qq_face",
+      "count": 2,
+      "updatedAt": "2026-03-23 10:15:16"
+    },
+    {
+      "name": "a slice of peach",
+      "artist": "牛尾憲輔",
+      "emojiId": "qq_face_63",
+      "emoji": "玫瑰",
+      "emojiType": "qq_face",
+      "count": 2,
+      "updatedAt": "2026-03-23 10:15:11"
+    },
+    {
+      "name": "a slice of peach",
+      "artist": "牛尾憲輔",
+      "emojiId": "qq_face_66",
+      "emoji": "爱心",
+      "emojiType": "qq_face",
+      "count": 2,
+      "updatedAt": "2026-03-23 10:15:05"
+    }
+  ],
+  "comments": [
+    {
+      "userId": "244530225",
+      "name": "愛唄",
+      "artist": "石見舞菜香",
+      "comment": "test",
+      "nick": "圆",
+      "commentedAt": "2026-03-23 03:52:45"
+    },
+    {
+      "userId": "244530225",
+      "name": "夕焼けサンディブラウン",
+      "artist": "多田葵",
+      "comment": "test",
+      "nick": "圆",
+      "commentedAt": "2026-03-23 04:39:43"
+    }
+  ]
+}
