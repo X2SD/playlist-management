@@ -139,7 +139,6 @@ const els = {
 
   dashboardSubtitle: document.getElementById("dashboardSubtitle"),
   chartTagRadar: document.getElementById("chartTagRadar"),
-  chartAddWeek: document.getElementById("chartAddWeek"),
   heatTopList: document.getElementById("heatTopList"),
   heatNote: document.getElementById("heatNote"),
   commentSearch: document.getElementById("commentSearch"),
@@ -658,33 +657,6 @@ function renderDashboard() {
       if (state.view === "dashboard") renderDashboard();
     }, 250);
     return;
-  }
-
-  // Add-week histogram (from songbot library.addWeek like 2026W12)
-  if (els.chartAddWeek) {
-    const sb2 = state.songbot;
-    const lib = sb2?.library || [];
-    const counts = new Map();
-    for (const row of lib) {
-      const w = normalizeStr(row.addWeek);
-      if (!w) continue;
-      counts.set(w, (counts.get(w) ?? 0) + 1);
-    }
-    const labels = Array.from(counts.keys()).sort((a, b) => a.localeCompare(b));
-    const values = labels.map((k) => counts.get(k) ?? 0);
-    destroyChart(state.charts.addWeek);
-    state.charts.addWeek = new window.Chart(els.chartAddWeek, {
-      type: "bar",
-      data: { labels, datasets: [{ label: "新增歌曲数", data: values }] },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-        },
-      },
-    });
   }
 
   if (els.chartTagRadar) {

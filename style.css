@@ -313,8 +313,9 @@ body{
 .playlist-item > div:first-child{
   min-width: 0;
   flex: 1 1 auto;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .playlist-item .pill{flex: 0 0 auto}
 .playlist-item:hover{background: rgba(255,255,255,.06)}
