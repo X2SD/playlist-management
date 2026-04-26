@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "generatedAt": "2026-04-26T13:03:16.766376+00:00",
+  "source": "new songs",
+  "items": [
+    {
+      "date": "20260426",
+      "file": "newsongs/20260426.png",
+      "thumb": "newsongs/20260426.png"
+    },
+    {
+      "date": "20260419",
+      "file": "newsongs/20260419.png",
+      "thumb": "newsongs/20260419.png"
+    },
+    {
+      "date": "20260412",
+      "file": "newsongs/20260412.png",
+      "thumb": "newsongs/20260412.png"
+    },
+    {
+      "date": "20260406",
+      "file": "newsongs/20260406.png",
+      "thumb": "newsongs/20260406.png"
+    },
+    {
+      "date": "20260329",
+      "file": "newsongs/20260329.png",
+      "thumb": "newsongs/20260329.png"
+    },
+    {
+      "date": "20260322",
+      "file": "newsongs/20260322.png",
+      "thumb": "newsongs/20260322.png"
+    },
+    {
+      "date": "20260308",
+      "file": "newsongs/20260308.png",
+      "thumb": "newsongs/20260308.png"
+    },
+    {
+      "date": "20260301",
+      "file": "newsongs/20260301.png",
+      "thumb": "newsongs/20260301.png"
+    },
+    {
+      "date": "20260207",
+      "file": "newsongs/20260207.png",
+      "thumb": "newsongs/20260207.png"
+    },
+    {
+      "date": "20260201",
+      "file": "newsongs/20260201.png",
+      "thumb": "newsongs/20260201.png"
+    }
+  ]
+}

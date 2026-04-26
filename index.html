@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlist Management</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">Playlist Management</div>
+          <div class="brand__subtitle">歌单浏览 · 风格标签 · 本地保存</div>
+        </div>
+
+        <nav class="nav">
+          <button id="navLibrary" class="nav__btn" type="button" aria-pressed="true">歌单库</button>
+          <button id="navWeekly" class="nav__btn" type="button" aria-pressed="false">每周新增</button>
+        </nav>
+
+        <div class="topbar__actions">
+          <label class="btn">
+            导入 songs.txt
+            <input id="fileInput" class="sr-only" type="file" accept=".txt,.tsv,.csv" />
+          </label>
+          <button id="exportBtn" class="btn btn--ghost" type="button" disabled>导出标签 JSON</button>
+          <label class="btn btn--ghost" aria-disabled="true">
+            导入标签 JSON
+            <input id="importTagsInput" class="sr-only" type="file" accept=".json" disabled />
+          </label>
+          <button id="resetTagsBtn" class="btn btn--danger" type="button" disabled>清空本地标签</button>
+        </div>
+      </header>
+
+      <div id="notice" class="notice" hidden></div>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <div class="panel__title">歌单</div>
+          <div id="playlistList" class="playlist-list">
+            <div class="muted">请先导入 `songs.txt`</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__title">风格/标签</div>
+          <div id="genreChips" class="chip-row"></div>
+          <div class="panel__hint muted">点击标签筛选；在歌曲行里可编辑标签。</div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__title">搜索</div>
+          <input id="searchInput" class="input" type="search" placeholder="搜索：歌名 / 歌手 / 歌单 / 标签" disabled />
+          <div class="row row--wrap">
+            <label class="check">
+              <input id="onlyUntagged" type="checkbox" disabled />
+              只看未打标签
+            </label>
+          </div>
+          <div id="stats" class="stats muted"></div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div id="libraryView" class="panel panel--main">
+          <div class="panel__title">
+            <span id="currentTitle">未导入</span>
+            <span id="currentSubtitle" class="muted"></span>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width: 38%">歌曲名</th>
+                  <th style="width: 28%">歌手</th>
+                  <th style="width: 16%">歌单</th>
+                  <th style="width: 18%">风格/标签</th>
+                </tr>
+              </thead>
+              <tbody id="songTbody">
+                <tr>
+                  <td colspan="4" class="muted">导入 `songs.txt` 后会显示列表。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="weeklyView" class="panel panel--main" hidden>
+          <div class="panel__title">
+            <span>每周新增</span>
+            <span id="weeklySubtitle" class="muted"></span>
+          </div>
+          <div id="weeklyGrid" class="weekly-grid">
+            <div class="muted">未检测到 `web/newsongs.json`。你可以先运行生成脚本，再刷新页面。</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <dialog id="tagDialog" class="dialog">
+      <form method="dialog" class="dialog__card">
+        <div class="dialog__title">编辑标签</div>
+        <div id="dialogSongInfo" class="dialog__subtitle muted"></div>
+        <div class="dialog__body">
+          <div class="muted" style="margin-bottom: 8px">用逗号分隔，例如：`摇滚, 日系, 游戏原声`</div>
+          <input id="tagInput" class="input" type="text" autocomplete="off" placeholder="输入标签..." />
+          <div class="row row--wrap" style="margin-top: 10px">
+            <button id="suggestJpopBtn" class="btn btn--ghost" type="button">建议：J-POP</button>
+            <button id="suggestAnimeBtn" class="btn btn--ghost" type="button">建议：动漫</button>
+            <button id="suggestVocaloidBtn" class="btn btn--ghost" type="button">建议：Vocaloid</button>
+            <button id="suggestGameBtn" class="btn btn--ghost" type="button">建议：游戏</button>
+            <button id="suggestInstrumentalBtn" class="btn btn--ghost" type="button">建议：纯音乐</button>
+          </div>
+        </div>
+        <div class="dialog__actions">
+          <button class="btn btn--ghost" value="cancel">取消</button>
+          <button id="saveTagsBtn" class="btn" value="default">保存</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="imageDialog" class="dialog">
+      <form method="dialog" class="dialog__card dialog__card--img">
+        <div class="dialog__title">每周新增</div>
+        <div id="imageDialogSubtitle" class="dialog__subtitle muted"></div>
+        <div class="dialog__body">
+          <img id="imageDialogImg" class="img-preview" alt="weekly new songs" />
+        </div>
+        <div class="dialog__actions">
+          <button class="btn btn--ghost" value="close">关闭</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
