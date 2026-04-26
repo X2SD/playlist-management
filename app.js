@@ -130,6 +130,7 @@ const els = {
   dashboardSubtitle: document.getElementById("dashboardSubtitle"),
   chartTopTags: document.getElementById("chartTopTags"),
   chartTagRadar: document.getElementById("chartTagRadar"),
+  chartAddWeek: document.getElementById("chartAddWeek"),
   chartHeatTop: document.getElementById("chartHeatTop"),
   heatNote: document.getElementById("heatNote"),
   emojiLegend: document.getElementById("emojiLegend"),
@@ -183,6 +184,7 @@ const state = {
   charts: {
     topTags: null,
     tagRadar: null,
+    addWeek: null,
     heatTop: null,
   },
   commentNonce: 0,
@@ -683,6 +685,33 @@ function renderDashboard() {
     state.charts.topTags = new window.Chart(els.chartTopTags, {
       type: "bar",
       data: { labels: top.map((x) => x.tag), datasets: [{ label: "歌曲数", data: top.map((x) => x.count) }] },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+        },
+      },
+    });
+  }
+
+  // Add-week histogram (from songbot library.addWeek like 2026W12)
+  if (els.chartAddWeek) {
+    const sb2 = state.songbot;
+    const lib = sb2?.library || [];
+    const counts = new Map();
+    for (const row of lib) {
+      const w = normalizeStr(row.addWeek);
+      if (!w) continue;
+      counts.set(w, (counts.get(w) ?? 0) + 1);
+    }
+    const labels = Array.from(counts.keys()).sort((a, b) => a.localeCompare(b));
+    const values = labels.map((k) => counts.get(k) ?? 0);
+    destroyChart(state.charts.addWeek);
+    state.charts.addWeek = new window.Chart(els.chartAddWeek, {
+      type: "bar",
+      data: { labels, datasets: [{ label: "新增歌曲数", data: values }] },
       options: {
         responsive: true,
         plugins: { legend: { display: false } },
