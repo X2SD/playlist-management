@@ -851,6 +851,10 @@ async function bootFromStaticFilesIfPresent() {
     state.weeklyImages.sort((a, b) => b.date.localeCompare(a.date));
   }
 
+  const songbotJson = await tryLoadStaticJSON(STATIC_SONGBOT_URL);
+  const sb = normalizeSongbotPayload(songbotJson);
+  if (sb) state.songbot = sb;
+
   if (state.songs.length === 0 && window.location.protocol !== "file:") {
     showNotice(
       "未能自动读取 ./songs.json（可能还没生成或没部署到同一目录）。\n" +
@@ -870,6 +874,13 @@ if (els.navLibrary) {
 if (els.navWeekly) {
   els.navWeekly.addEventListener("click", () => {
     state.view = "weekly";
+    renderAll();
+  });
+}
+
+if (els.navDashboard) {
+  els.navDashboard.addEventListener("click", () => {
+    state.view = "dashboard";
     renderAll();
   });
 }
@@ -902,6 +913,13 @@ els.onlyUntagged.addEventListener("change", (e) => {
   state.onlyUntagged = Boolean(e.target.checked);
   renderAll();
 });
+
+if (els.sortSelect) {
+  els.sortSelect.addEventListener("change", (e) => {
+    state.sort = e.target.value || "playlist:asc";
+    renderAll();
+  });
+}
 
 els.exportBtn.addEventListener("click", () => {
   const payload = {
