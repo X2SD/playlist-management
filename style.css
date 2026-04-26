@@ -239,6 +239,52 @@ body{
   color: rgba(255,255,255,.82);
 }
 
+.rank-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.rank-item{
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+.rank-item__top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+}
+.rank-item__label{
+  min-width: 0;
+  flex: 1 1 auto;
+  font-weight: 700;
+  color: rgba(255,255,255,.86);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.rank-item__score{
+  flex: 0 0 auto;
+  font-family: var(--mono);
+  color: rgba(255,255,255,.72);
+  font-size: 12px;
+  margin-top: 2px;
+}
+.rank-item__bar{
+  margin-top: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  overflow:hidden;
+}
+.rank-item__bar > div{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(124,92,255,.92), rgba(0,200,255,.70));
+}
+
 @media (max-width: 980px){
   .dash-grid{grid-template-columns: 1fr;}
 }

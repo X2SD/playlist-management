@@ -138,10 +138,9 @@ const els = {
   dashboardView: document.getElementById("dashboardView"),
 
   dashboardSubtitle: document.getElementById("dashboardSubtitle"),
-  chartTopTags: document.getElementById("chartTopTags"),
   chartTagRadar: document.getElementById("chartTagRadar"),
   chartAddWeek: document.getElementById("chartAddWeek"),
-  chartHeatTop: document.getElementById("chartHeatTop"),
+  heatTopList: document.getElementById("heatTopList"),
   heatNote: document.getElementById("heatNote"),
   commentSearch: document.getElementById("commentSearch"),
   commentRefresh: document.getElementById("commentRefresh"),
@@ -661,23 +660,6 @@ function renderDashboard() {
     return;
   }
 
-  const top = getTopTags(12);
-  if (els.chartTopTags) {
-    destroyChart(state.charts.topTags);
-    state.charts.topTags = new window.Chart(els.chartTopTags, {
-      type: "bar",
-      data: { labels: top.map((x) => x.tag), datasets: [{ label: "歌曲数", data: top.map((x) => x.count) }] },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-        },
-      },
-    });
-  }
-
   // Add-week histogram (from songbot library.addWeek like 2026W12)
   if (els.chartAddWeek) {
     const sb2 = state.songbot;
@@ -726,21 +708,30 @@ function renderDashboard() {
     });
   }
 
-  if (els.chartHeatTop) {
+  if (els.heatTopList) {
     const heatTop = computeSongbotHeatTop(12);
-    destroyChart(state.charts.heatTop);
-    state.charts.heatTop = new window.Chart(els.chartHeatTop, {
-      type: "bar",
-      data: { labels: heatTop.map((x) => x.label), datasets: [{ label: "热度", data: heatTop.map((x) => x.count) }] },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
-        },
-      },
-    });
+    if (!heatTop.length) {
+      els.heatTopList.textContent = "未加载到热度数据（需要 songbot.json）";
+      els.heatTopList.classList.add("muted");
+    } else {
+      els.heatTopList.classList.remove("muted");
+      els.heatTopList.innerHTML = "";
+      const max = Math.max(...heatTop.map((x) => Number(x.count) || 0), 1);
+      const frag = document.createDocumentFragment();
+      for (const row of heatTop) {
+        const item = document.createElement("div");
+        item.className = "rank-item";
+        const pct = Math.max(2, Math.round(((Number(row.count) || 0) / max) * 100));
+        item.innerHTML =
+          `<div class="rank-item__top">` +
+          `<div class="rank-item__label">${escapeHtml(row.label)}</div>` +
+          `<div class="rank-item__score">${Math.round(Number(row.count) || 0)}</div>` +
+          `</div>` +
+          `<div class="rank-item__bar"><div style="width:${pct}%"></div></div>`;
+        frag.appendChild(item);
+      }
+      els.heatTopList.appendChild(frag);
+    }
   }
 
   if (els.heatNote) {

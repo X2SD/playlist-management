@@ -109,10 +109,6 @@
           </div>
           <div class="dash-grid">
             <div class="dash-card">
-              <div class="dash-card__title">Top 标签（柱状）</div>
-              <canvas id="chartTopTags" height="220"></canvas>
-            </div>
-            <div class="dash-card">
               <div class="dash-card__title">Top 标签（雷达）</div>
               <canvas id="chartTagRadar" height="220"></canvas>
             </div>
@@ -123,7 +119,7 @@
             </div>
             <div class="dash-card">
               <div class="dash-card__title">热度 Top（来自喵喵机器人）</div>
-              <canvas id="chartHeatTop" height="220"></canvas>
+              <div id="heatTopList" class="rank-list muted">未加载到热度数据</div>
               <div id="heatNote" class="muted" style="margin-top:10px;font-size:12px"></div>
             </div>
             <div class="dash-card dash-card--wide">
@@ -134,9 +130,6 @@
               </div>
               <div id="commentList" class="comment-list muted">未加载到评论数据</div>
             </div>
-          </div>
-          <div class="muted" style="margin-top:12px; font-size:12px">
-            说明：可视化基于 `songs.json / tags.json / songbot.json`（每周新增数据暂不做 OCR 解析）。
           </div>
         </div>
       </main>
