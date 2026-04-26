@@ -9,14 +9,13 @@
   <body>
     <div class="app">
       <header class="topbar">
-        <button id="sidebarToggle" class="btn btn--ghost sidebar-toggle" type="button" aria-haspopup="dialog" aria-expanded="false">
-          筛选
-        </button>
-
         <nav class="nav">
+          <button id="sidebarToggle" class="nav__iconbtn" type="button" aria-haspopup="dialog" aria-expanded="false" title="筛选" aria-label="筛选">
+            ☰
+          </button>
           <button id="navLibrary" class="nav__btn" type="button" aria-pressed="true">歌单库</button>
           <button id="navWeekly" class="nav__btn" type="button" aria-pressed="false">每周新增</button>
-          <button id="navDashboard" class="nav__btn" type="button" aria-pressed="false">可视化</button>
+          <button id="navDashboard" class="nav__btn" type="button" aria-pressed="false">数据看板</button>
         </nav>
 
         <!-- 顶部操作区已移除：站点以静态数据为主 -->
@@ -34,20 +33,13 @@
         </div>
 
         <div class="panel">
-          <div class="panel__title">风格/标签</div>
+          <div class="panel__title">标签</div>
           <div id="genreChips" class="chip-row"></div>
-          <div class="panel__hint muted">点击标签筛选；在歌曲行里可编辑标签。</div>
         </div>
 
         <div class="panel">
           <div class="panel__title">搜索</div>
           <input id="searchInput" class="input" type="search" placeholder="搜索：歌名 / 歌手 / 歌单 / 标签" disabled />
-          <div class="row row--wrap">
-            <label class="check">
-              <input id="onlyUntagged" type="checkbox" disabled />
-              只看未打标签
-            </label>
-          </div>
           <div class="row row--wrap" style="margin-top:10px">
             <select id="sortSelect" class="select" disabled>
               <option value="playlist:asc">按歌单（A→Z）</option>
@@ -62,7 +54,6 @@
               <option value="updated:asc">按标签更新时间（旧→新）</option>
             </select>
           </div>
-          <div id="stats" class="stats muted"></div>
         </div>
       </aside>
 
@@ -70,7 +61,6 @@
         <div id="libraryView" class="panel panel--main">
           <div class="panel__title">
             <span id="currentTitle">未导入</span>
-            <span id="currentSubtitle" class="muted"></span>
           </div>
 
           <div class="table-wrap">
@@ -80,7 +70,7 @@
                   <th style="width: 38%">歌曲名</th>
                   <th style="width: 28%">歌手</th>
                   <th style="width: 16%">歌单</th>
-                  <th style="width: 18%">风格/标签</th>
+                  <th style="width: 18%">标签</th>
                 </tr>
               </thead>
               <tbody id="songTbody">
@@ -103,10 +93,6 @@
         </div>
 
         <div id="dashboardView" class="panel panel--main" hidden>
-          <div class="panel__title">
-            <span>可视化</span>
-            <span id="dashboardSubtitle" class="muted"></span>
-          </div>
           <div class="dash-grid">
             <div class="dash-card">
               <div class="dash-card__title">热度 Top（来自喵喵机器人）</div>
@@ -129,28 +115,6 @@
         </div>
       </main>
     </div>
-
-    <dialog id="tagDialog" class="dialog">
-      <form method="dialog" class="dialog__card">
-        <div class="dialog__title">编辑标签</div>
-        <div id="dialogSongInfo" class="dialog__subtitle muted"></div>
-        <div class="dialog__body">
-          <div class="muted" style="margin-bottom: 8px">用逗号分隔，例如：`摇滚, 日系, 游戏原声`</div>
-          <input id="tagInput" class="input" type="text" autocomplete="off" placeholder="输入标签..." />
-          <div class="row row--wrap" style="margin-top: 10px">
-            <button id="suggestJpopBtn" class="btn btn--ghost" type="button">建议：J-POP</button>
-            <button id="suggestAnimeBtn" class="btn btn--ghost" type="button">建议：动漫</button>
-            <button id="suggestVocaloidBtn" class="btn btn--ghost" type="button">建议：Vocaloid</button>
-            <button id="suggestGameBtn" class="btn btn--ghost" type="button">建议：游戏</button>
-            <button id="suggestInstrumentalBtn" class="btn btn--ghost" type="button">建议：纯音乐</button>
-          </div>
-        </div>
-        <div class="dialog__actions">
-          <button class="btn btn--ghost" value="cancel">取消</button>
-          <button id="saveTagsBtn" class="btn" value="default">保存</button>
-        </div>
-      </form>
-    </dialog>
 
     <dialog id="imageDialog" class="dialog">
       <form method="dialog" class="dialog__card dialog__card--img">

@@ -137,7 +137,6 @@ const els = {
   weeklyView: document.getElementById("weeklyView"),
   dashboardView: document.getElementById("dashboardView"),
 
-  dashboardSubtitle: document.getElementById("dashboardSubtitle"),
   chartTagRadar: document.getElementById("chartTagRadar"),
   heatTopList: document.getElementById("heatTopList"),
   heatNote: document.getElementById("heatNote"),
@@ -151,23 +150,10 @@ const els = {
   playlistList: document.getElementById("playlistList"),
   genreChips: document.getElementById("genreChips"),
   searchInput: document.getElementById("searchInput"),
-  onlyUntagged: document.getElementById("onlyUntagged"),
   sortSelect: document.getElementById("sortSelect"),
-  stats: document.getElementById("stats"),
 
   currentTitle: document.getElementById("currentTitle"),
-  currentSubtitle: document.getElementById("currentSubtitle"),
   songTbody: document.getElementById("songTbody"),
-
-  tagDialog: document.getElementById("tagDialog"),
-  dialogSongInfo: document.getElementById("dialogSongInfo"),
-  tagInput: document.getElementById("tagInput"),
-  saveTagsBtn: document.getElementById("saveTagsBtn"),
-  suggestJpopBtn: document.getElementById("suggestJpopBtn"),
-  suggestAnimeBtn: document.getElementById("suggestAnimeBtn"),
-  suggestVocaloidBtn: document.getElementById("suggestVocaloidBtn"),
-  suggestGameBtn: document.getElementById("suggestGameBtn"),
-  suggestInstrumentalBtn: document.getElementById("suggestInstrumentalBtn"),
 
   imageDialog: document.getElementById("imageDialog"),
   imageDialogSubtitle: document.getElementById("imageDialogSubtitle"),
@@ -180,7 +166,6 @@ const state = {
   playlists: [],
   selectedPlaylist: "__ALL__",
   search: "",
-  onlyUntagged: false,
   sort: "playlist:asc",
   selectedGenres: new Set(),
   tagStore: loadTagStore(),
@@ -279,7 +264,6 @@ function matchesFilters(song) {
   if (state.selectedPlaylist !== "__ALL__" && song.playlist !== state.selectedPlaylist) return false;
 
   const tags = getSongTags(song);
-  if (state.onlyUntagged && tags.length > 0) return false;
 
   const q = normalizeStr(state.search).toLowerCase();
   if (q) {
@@ -373,37 +357,14 @@ function renderGenreChips() {
 function renderHeader(filteredCount) {
   if (state.songs.length === 0) {
     els.currentTitle.textContent = "未导入";
-    els.currentSubtitle.textContent = "";
     return;
   }
   const title = state.selectedPlaylist === "__ALL__" ? "全部歌曲" : state.selectedPlaylist;
   els.currentTitle.textContent = title;
-
-  const parts = [];
-  parts.push(`共 ${state.songs.length} 首`);
-  if (state.selectedPlaylist !== "__ALL__") {
-    const p = state.playlists.find((x) => x.name === state.selectedPlaylist);
-    if (p) parts.push(`本歌单 ${p.count} 首`);
-  }
-  parts.push(`当前显示 ${filteredCount} 首`);
-  if (state.selectedGenres.size > 0) parts.push(`标签筛选：${Array.from(state.selectedGenres).join(" + ")}`);
-  els.currentSubtitle.textContent = parts.join(" · ");
 }
 
 function renderStats(filteredSongs) {
-  if (state.songs.length === 0) {
-    els.stats.textContent = "";
-    return;
-  }
-  const tagged = filteredSongs.filter((s) => getSongTags(s).length > 0).length;
-  const untagged = filteredSongs.length - tagged;
-
-  const artists = new Set(filteredSongs.map((s) => s.artist)).size;
-  const playlists = new Set(filteredSongs.map((s) => s.playlist)).size;
-
-  els.stats.textContent =
-    `当前范围：歌手 ${artists} 位 · 歌单 ${playlists} 个\n` +
-    `标签：已标 ${tagged} · 未标 ${untagged}`;
+  // removed
 }
 
 function renderSongs() {
@@ -455,13 +416,6 @@ function renderSongs() {
       }
     }
 
-    const editBtn = document.createElement("button");
-    editBtn.type = "button";
-    editBtn.className = "tag-action";
-    editBtn.textContent = "编辑";
-    editBtn.addEventListener("click", () => openTagDialog(s));
-    wrap.appendChild(editBtn);
-
     tdTags.appendChild(wrap);
     tr.appendChild(tdTags);
 
@@ -475,7 +429,6 @@ function renderSongs() {
 
 function enableUI() {
   els.searchInput.disabled = false;
-  els.onlyUntagged.disabled = false;
   if (els.sortSelect) els.sortSelect.disabled = false;
 }
 
@@ -493,23 +446,6 @@ function escapeHtml(s) {
     .replace(/'/g, "&#039;");
 }
 
-function openTagDialog(song) {
-  const k = songKey(song);
-  state.editingSongKey = k;
-  const tags = getSongTags(song);
-  els.dialogSongInfo.textContent = `${song.name} — ${song.artist}（${song.playlist}）`;
-  els.tagInput.value = tagsToString(tags);
-  els.tagDialog.showModal();
-  setTimeout(() => els.tagInput.focus(), 0);
-}
-
-function appendSuggestion(tag) {
-  const current = splitTags(els.tagInput.value);
-  current.push(tag);
-  els.tagInput.value = tagsToString(uniqSorted(current));
-  els.tagInput.focus();
-}
-
 function renderAll() {
   renderNav();
   if (state.view === "weekly") {
@@ -523,13 +459,6 @@ function renderAll() {
   renderPlaylists();
   const { filtered } = renderSongs();
   renderGenreChips();
-
-  // keep stats tied to filtered list; genre chips are global in dataset.
-  // If the user chose a playlist, chips remain global, but filters apply after selection.
-  // That is intentional: chips represent your taxonomy.
-  if (filtered.length === 0 && state.selectedGenres.size > 0) {
-    // if filters lead to empty, chips still reflect existing tags; no special action needed
-  }
 }
 
 function renderNav() {
@@ -643,14 +572,13 @@ function destroyChart(ch) {
 }
 
 function renderDashboard() {
-  if (!els.dashboardSubtitle) return;
   const totalSongs = state.songs.length;
   const taggedSongs = state.songs.filter((s) => getSongTags(s).length > 0).length;
   const sb = state.songbot;
   const sbText = sb ? ` · 喵喵机器人：库 ${sb.library.length} / 表情记录 ${sb.reactions.length} / 评论 ${sb.comments.length}` : "";
-  els.dashboardSubtitle.textContent = totalSongs
-    ? `共 ${totalSongs} 首 · 已打标签 ${taggedSongs} 首${sbText}`
-    : `请先导入 songs.txt 或生成 songs.json${sbText}`;
+  // 顶部文案已移除：保留这里的计算以便后续扩展
+  void taggedSongs;
+  void sbText;
 
   if (!ensureChartJsReady()) {
     setTimeout(() => {
@@ -908,11 +836,6 @@ els.searchInput.addEventListener("input", (e) => {
   renderAll();
 });
 
-els.onlyUntagged.addEventListener("change", (e) => {
-  state.onlyUntagged = Boolean(e.target.checked);
-  renderAll();
-});
-
 if (els.sortSelect) {
   els.sortSelect.addEventListener("change", (e) => {
     state.sort = e.target.value || "playlist:asc";
@@ -932,33 +855,6 @@ if (els.commentRefresh) {
     if (state.view === "dashboard") renderCommentsSection();
   });
 }
-
-els.tagDialog.addEventListener("close", () => {
-  // reset editing state to avoid accidental carry-over
-  state.editingSongKey = null;
-});
-
-els.saveTagsBtn.addEventListener("click", () => {
-  // dialog closes automatically (method=dialog). We need to persist before close finishes.
-  const k = state.editingSongKey;
-  if (!k) return;
-
-  // find a song sample to compute tags; we already have key, but need to set store with same key
-  const tags = splitTags(els.tagInput.value);
-  if (tags.length === 0) {
-    delete state.tagStore[k];
-  } else {
-    state.tagStore[k] = { tags, updatedAt: Date.now() };
-  }
-  saveTagStore(state.tagStore);
-  renderAll();
-});
-
-els.suggestJpopBtn.addEventListener("click", () => appendSuggestion("J-POP"));
-els.suggestAnimeBtn.addEventListener("click", () => appendSuggestion("动漫"));
-els.suggestVocaloidBtn.addEventListener("click", () => appendSuggestion("Vocaloid"));
-els.suggestGameBtn.addEventListener("click", () => appendSuggestion("游戏"));
-els.suggestInstrumentalBtn.addEventListener("click", () => appendSuggestion("纯音乐"));
 
 // initial render (no data)
 ensureDailyVersionInUrl();

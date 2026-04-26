@@ -51,8 +51,6 @@ body{
 .brand{min-width: 0}
 .brand__title{white-space: nowrap; overflow:hidden; text-overflow: ellipsis}
 
-.sidebar-toggle{display:none}
-
 .nav{
   display:flex;
   gap:8px;
@@ -62,6 +60,18 @@ body{
   background: rgba(255,255,255,.04);
   min-width: 0;
 }
+.nav__iconbtn{
+  appearance:none;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.82);
+  font-weight: 800;
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor:pointer;
+  line-height: 1;
+}
+.nav__iconbtn:active{transform: translateY(1px)}
 .nav__btn{
   appearance:none;
   border: 1px solid transparent;
@@ -333,6 +343,11 @@ body{
 }
 
 .chip-row{display:flex; flex-wrap:wrap; gap:8px}
+#genreChips{
+  max-height: 220px;
+  overflow: auto;
+  padding-right: 2px;
+}
 .chip{
   padding:6px 10px;
   border-radius: 999px;
@@ -495,7 +510,6 @@ body{
     height: auto;
   }
   /* 小屏：侧边栏改为抽屉，避免遮挡主内容 */
-  .sidebar-toggle{display:inline-flex}
   .sidebar{
     position: fixed;
     left: 10px;
@@ -542,6 +556,7 @@ body{
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    justify-content: center;
   }
   .nav::-webkit-scrollbar{display:none}
   .nav__btn{flex: 0 0 auto}
