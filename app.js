@@ -6,6 +6,29 @@ const STATIC_TAGS_URL = "./tags.json";
 const STATIC_NEWSONGS_URL = "./newsongs.json";
 const STATIC_SONGBOT_URL = "./songbot.json";
 
+function formatYMD(dt) {
+  const y = dt.getFullYear();
+  const m = String(dt.getMonth() + 1).padStart(2, "0");
+  const d = String(dt.getDate()).padStart(2, "0");
+  return `${y}${m}${d}`;
+}
+
+function ensureDailyVersionInUrl() {
+  try {
+    if (window.location.protocol === "file:") return;
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("v")) return;
+    const today = formatYMD(new Date());
+    url.searchParams.set("v", today);
+    // Avoid infinite loops if a browser strips query params.
+    if (window.sessionStorage.getItem("pm:autov:done") === today) return;
+    window.sessionStorage.setItem("pm:autov:done", today);
+    window.location.replace(url.toString());
+  } catch {
+    // ignore
+  }
+}
+
 function normalizeStr(s) {
   return (s ?? "").toString().trim();
 }
@@ -105,6 +128,10 @@ const els = {
   navLibrary: document.getElementById("navLibrary"),
   navWeekly: document.getElementById("navWeekly"),
   navDashboard: document.getElementById("navDashboard"),
+
+  sidebar: document.getElementById("sidebar"),
+  sidebarToggle: document.getElementById("sidebarToggle"),
+  sidebarBackdrop: document.getElementById("sidebarBackdrop"),
 
   libraryView: document.getElementById("libraryView"),
   weeklyView: document.getElementById("weeklyView"),
@@ -783,12 +810,22 @@ async function readFileText(file) {
 
 async function tryLoadStaticJSON(url) {
   try {
-    const res = await fetch(url, { cache: "no-store" });
+    const base = new URL(url, window.location.href);
+    const v = new URL(window.location.href).searchParams.get("v");
+    if (v) base.searchParams.set("v", v);
+    const res = await fetch(base.toString(), { cache: "no-store" });
     if (!res.ok) return null;
     return await res.json();
   } catch {
     return null;
   }
+}
+
+function setSidebarOpen(open) {
+  const isOpen = Boolean(open);
+  document.body.classList.toggle("sidebar-open", isOpen);
+  if (els.sidebarToggle) els.sidebarToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  if (els.sidebarBackdrop) els.sidebarBackdrop.hidden = !isOpen;
 }
 
 function showNotice(text) {
@@ -870,12 +907,14 @@ async function bootFromStaticFilesIfPresent() {
 if (els.navLibrary) {
   els.navLibrary.addEventListener("click", () => {
     state.view = "library";
+    setSidebarOpen(false);
     renderAll();
   });
 }
 if (els.navWeekly) {
   els.navWeekly.addEventListener("click", () => {
     state.view = "weekly";
+    setSidebarOpen(false);
     renderAll();
   });
 }
@@ -883,9 +922,23 @@ if (els.navWeekly) {
 if (els.navDashboard) {
   els.navDashboard.addEventListener("click", () => {
     state.view = "dashboard";
+    setSidebarOpen(false);
     renderAll();
   });
 }
+
+if (els.sidebarToggle) {
+  els.sidebarToggle.addEventListener("click", () => {
+    const open = !document.body.classList.contains("sidebar-open");
+    setSidebarOpen(open);
+  });
+}
+if (els.sidebarBackdrop) {
+  els.sidebarBackdrop.addEventListener("click", () => setSidebarOpen(false));
+}
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") setSidebarOpen(false);
+});
 
 els.searchInput.addEventListener("input", (e) => {
   state.search = e.target.value ?? "";
@@ -945,6 +998,7 @@ els.suggestGameBtn.addEventListener("click", () => appendSuggestion("游戏"));
 els.suggestInstrumentalBtn.addEventListener("click", () => appendSuggestion("纯音乐"));
 
 // initial render (no data)
+ensureDailyVersionInUrl();
 renderAll();
 bootFromStaticFilesIfPresent();
 
