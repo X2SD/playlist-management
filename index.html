@@ -17,6 +17,7 @@
         <nav class="nav">
           <button id="navLibrary" class="nav__btn" type="button" aria-pressed="true">歌单库</button>
           <button id="navWeekly" class="nav__btn" type="button" aria-pressed="false">每周新增</button>
+          <button id="navDashboard" class="nav__btn" type="button" aria-pressed="false">可视化</button>
         </nav>
 
         <div class="topbar__actions">
@@ -58,6 +59,20 @@
               只看未打标签
             </label>
           </div>
+          <div class="row row--wrap" style="margin-top:10px">
+            <select id="sortSelect" class="select" disabled>
+              <option value="playlist:asc">按歌单（A→Z）</option>
+              <option value="playlist:desc">按歌单（Z→A）</option>
+              <option value="name:asc">按歌名（A→Z）</option>
+              <option value="name:desc">按歌名（Z→A）</option>
+              <option value="artist:asc">按歌手（A→Z）</option>
+              <option value="artist:desc">按歌手（Z→A）</option>
+              <option value="tags:desc">按标签数量（多→少）</option>
+              <option value="tags:asc">按标签数量（少→多）</option>
+              <option value="updated:desc">按标签更新时间（新→旧）</option>
+              <option value="updated:asc">按标签更新时间（旧→新）</option>
+            </select>
+          </div>
           <div id="stats" class="stats muted"></div>
         </div>
       </aside>
@@ -95,6 +110,42 @@
           </div>
           <div id="weeklyGrid" class="weekly-grid">
             <div class="muted">未检测到 `web/newsongs.json`。你可以先运行生成脚本，再刷新页面。</div>
+          </div>
+        </div>
+
+        <div id="dashboardView" class="panel panel--main" hidden>
+          <div class="panel__title">
+            <span>可视化</span>
+            <span id="dashboardSubtitle" class="muted"></span>
+          </div>
+          <div class="dash-grid">
+            <div class="dash-card">
+              <div class="dash-card__title">歌单占比</div>
+              <canvas id="chartPlaylists" height="220"></canvas>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card__title">Top 标签（柱状）</div>
+              <canvas id="chartTopTags" height="220"></canvas>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card__title">Top 标签（雷达）</div>
+              <canvas id="chartTagRadar" height="220"></canvas>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card__title">每周新增（期数）</div>
+              <canvas id="chartWeekly" height="220"></canvas>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card__title">互动热度 Top（来自 songbot）</div>
+              <canvas id="chartHeatTop" height="220"></canvas>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card__title">评论 Top（来自 songbot）</div>
+              <canvas id="chartCommentsTop" height="220"></canvas>
+            </div>
+          </div>
+          <div class="muted" style="margin-top:12px; font-size:12px">
+            说明：可视化基于 `songs.json / tags.json / newsongs.json / songbot.json`。
           </div>
         </div>
       </main>
@@ -135,6 +186,7 @@
       </form>
     </dialog>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

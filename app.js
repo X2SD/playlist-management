@@ -4,13 +4,13 @@ const STORAGE_KEY = "playlist-management:tags:v1";
 const STATIC_SONGS_URL = "./songs.json";
 const STATIC_TAGS_URL = "./tags.json";
 const STATIC_NEWSONGS_URL = "./newsongs.json";
+const STATIC_SONGBOT_URL = "./songbot.json";
 
 function normalizeStr(s) {
   return (s ?? "").toString().trim();
 }
 
 function songKey(song) {
-  // name + artist is generally stable; playlist can change.
   return `${normalizeStr(song.name)}\u0000${normalizeStr(song.artist)}`.toLowerCase();
 }
 
@@ -28,7 +28,6 @@ function parseTSV(text) {
     if (cols.length < 3) continue;
     const [name, artist, playlist] = cols.map((c) => normalizeStr(c));
     if (!name || !artist || !playlist) continue;
-    // skip header repeats
     if (name === "歌曲名" && artist === "歌手" && playlist === "所属歌单") continue;
     out.push({ name, artist, playlist });
   }
@@ -64,12 +63,10 @@ function mergeTagStores(base, incoming, { preferIncoming = false } = {}) {
       out[k] = { tags, updatedAt };
       continue;
     }
-
     if (preferIncoming) {
       out[k] = { tags, updatedAt };
       continue;
     }
-
     const prevUpdated = typeof out[k]?.updatedAt === "number" ? out[k].updatedAt : 0;
     if (updatedAt > prevUpdated) out[k] = { tags, updatedAt };
   }
@@ -120,11 +117,24 @@ const els = {
   exportBtn: document.getElementById("exportBtn"),
   importTagsInput: document.getElementById("importTagsInput"),
   resetTagsBtn: document.getElementById("resetTagsBtn"),
+
   notice: document.getElementById("notice"),
   navLibrary: document.getElementById("navLibrary"),
   navWeekly: document.getElementById("navWeekly"),
+  navDashboard: document.getElementById("navDashboard"),
+
   libraryView: document.getElementById("libraryView"),
   weeklyView: document.getElementById("weeklyView"),
+  dashboardView: document.getElementById("dashboardView"),
+
+  dashboardSubtitle: document.getElementById("dashboardSubtitle"),
+  chartPlaylists: document.getElementById("chartPlaylists"),
+  chartTopTags: document.getElementById("chartTopTags"),
+  chartTagRadar: document.getElementById("chartTagRadar"),
+  chartWeekly: document.getElementById("chartWeekly"),
+  chartHeatTop: document.getElementById("chartHeatTop"),
+  chartCommentsTop: document.getElementById("chartCommentsTop"),
+
   weeklySubtitle: document.getElementById("weeklySubtitle"),
   weeklyGrid: document.getElementById("weeklyGrid"),
 
@@ -132,6 +142,7 @@ const els = {
   genreChips: document.getElementById("genreChips"),
   searchInput: document.getElementById("searchInput"),
   onlyUntagged: document.getElementById("onlyUntagged"),
+  sortSelect: document.getElementById("sortSelect"),
   stats: document.getElementById("stats"),
 
   currentTitle: document.getElementById("currentTitle"),
@@ -154,22 +165,63 @@ const els = {
 };
 
 const state = {
-  view: "library", // library | weekly
+  view: "library", // library | weekly | dashboard
   songs: [],
   playlists: [],
   selectedPlaylist: "__ALL__",
   search: "",
   onlyUntagged: false,
-  selectedGenres: new Set(), // active filters
-  tagStore: loadTagStore(), // key -> { tags: string[], updatedAt: number }
-  staticTagStore: null, // optional from tags.json (for static deployment)
-  weeklyImages: [], // { date: 'YYYYMMDD', file: 'newsongs/xxx.png' }
+  sort: "playlist:asc",
+  selectedGenres: new Set(),
+  tagStore: loadTagStore(),
+  staticTagStore: null,
+  weeklyImages: [],
+  songbot: null,
   editingSongKey: null,
+  charts: {
+    playlists: null,
+    topTags: null,
+    tagRadar: null,
+    weekly: null,
+    heatTop: null,
+    commentsTop: null,
+  },
 };
 
 function getSongTags(song) {
   const rec = state.tagStore[songKey(song)];
   return Array.isArray(rec?.tags) ? rec.tags : [];
+}
+
+function getUpdatedAt(song) {
+  const rec = state.tagStore[songKey(song)];
+  return typeof rec?.updatedAt === "number" ? rec.updatedAt : 0;
+}
+
+function sortSongs(list) {
+  const raw = normalizeStr(state.sort || "playlist:asc");
+  const [key, dirRaw] = raw.split(":");
+  const dir = dirRaw === "desc" ? "desc" : "asc";
+  const mul = dir === "desc" ? -1 : 1;
+  const cmpText = (a, b) => a.localeCompare(b, "zh-Hans-CN");
+
+  const decorated = list.map((s, idx) => ({ s, idx }));
+  decorated.sort((A, B) => {
+    const a = A.s;
+    const b = B.s;
+
+    let r = 0;
+    if (key === "name") r = cmpText(a.name, b.name);
+    else if (key === "artist") r = cmpText(a.artist, b.artist);
+    else if (key === "playlist") r = cmpText(a.playlist, b.playlist);
+    else if (key === "tags") r = getSongTags(a).length - getSongTags(b).length;
+    else if (key === "updated") r = getUpdatedAt(a) - getUpdatedAt(b);
+    else r = cmpText(a.playlist, b.playlist);
+
+    if (r !== 0) return r * mul;
+    return A.idx - B.idx;
+  });
+  return decorated.map((x) => x.s);
 }
 
 function setSongTags(song, tags) {
@@ -199,6 +251,18 @@ function computeAllGenres() {
     for (const t of getSongTags(s)) all.push(t);
   }
   return uniqSorted(all);
+}
+
+function normalizeSongbotPayload(p) {
+  if (!p || typeof p !== "object") return null;
+  return {
+    library: Array.isArray(p.library) ? p.library : [],
+    reactions: Array.isArray(p.reactions) ? p.reactions : [],
+    comments: Array.isArray(p.comments) ? p.comments : [],
+    version: p.version,
+    source: p.source,
+    generatedAt: p.generatedAt,
+  };
 }
 
 function matchesFilters(song) {
@@ -338,7 +402,7 @@ function renderSongs() {
     return { filtered: [] };
   }
 
-  const filtered = state.songs.filter(matchesFilters);
+  const filtered = sortSongs(state.songs.filter(matchesFilters));
   renderHeader(filtered.length);
   renderStats(filtered);
 
@@ -406,6 +470,7 @@ function enableUI() {
   els.resetTagsBtn.disabled = false;
   els.searchInput.disabled = false;
   els.onlyUntagged.disabled = false;
+  if (els.sortSelect) els.sortSelect.disabled = false;
 }
 
 function enableReadonlyStaticNotice() {
@@ -445,6 +510,10 @@ function renderAll() {
     renderWeekly();
     return;
   }
+  if (state.view === "dashboard") {
+    renderDashboard();
+    return;
+  }
   renderPlaylists();
   const { filtered } = renderSongs();
   renderGenreChips();
@@ -462,8 +531,12 @@ function renderNav() {
     els.navLibrary.setAttribute("aria-pressed", state.view === "library" ? "true" : "false");
     els.navWeekly.setAttribute("aria-pressed", state.view === "weekly" ? "true" : "false");
   }
+  if (els.navDashboard) {
+    els.navDashboard.setAttribute("aria-pressed", state.view === "dashboard" ? "true" : "false");
+  }
   if (els.libraryView) els.libraryView.hidden = state.view !== "library";
   if (els.weeklyView) els.weeklyView.hidden = state.view !== "weekly";
+  if (els.dashboardView) els.dashboardView.hidden = state.view !== "dashboard";
 }
 
 function formatDateLabel(yyyymmdd) {
@@ -519,6 +592,187 @@ function renderWeekly() {
 
   els.weeklyGrid.innerHTML = "";
   els.weeklyGrid.appendChild(frag);
+}
+
+function getTopTags(limit = 12) {
+  const counts = new Map();
+  for (const s of state.songs) {
+    for (const t of getSongTags(s)) counts.set(t, (counts.get(t) ?? 0) + 1);
+  }
+  return Array.from(counts.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag, "zh-Hans-CN"))
+    .slice(0, limit);
+}
+
+function computeSongbotHeatTop(limit = 12) {
+  const sb = state.songbot;
+  if (!sb) return [];
+  const bySong = new Map();
+  for (const r of sb.reactions) {
+    const name = normalizeStr(r.name);
+    const artist = normalizeStr(r.artist);
+    const k = `${name}\u0000${artist}`.toLowerCase();
+    const cnt = Number(r.count ?? 0) || 0;
+    bySong.set(k, (bySong.get(k) ?? 0) + cnt);
+  }
+  return Array.from(bySong.entries())
+    .map(([k, count]) => {
+      const [name, artist] = k.split("\u0000");
+      return { label: `${name} — ${artist}`, count };
+    })
+    .sort((a, b) => b.count - a.count)
+    .slice(0, limit);
+}
+
+function computeSongbotCommentsTop(limit = 12) {
+  const sb = state.songbot;
+  if (!sb) return [];
+  const bySong = new Map();
+  for (const c of sb.comments) {
+    const name = normalizeStr(c.name);
+    const artist = normalizeStr(c.artist);
+    const k = `${name}\u0000${artist}`.toLowerCase();
+    bySong.set(k, (bySong.get(k) ?? 0) + 1);
+  }
+  return Array.from(bySong.entries())
+    .map(([k, count]) => {
+      const [name, artist] = k.split("\u0000");
+      return { label: `${name} — ${artist}`, count };
+    })
+    .sort((a, b) => b.count - a.count)
+    .slice(0, limit);
+}
+
+function ensureChartJsReady() {
+  return typeof window.Chart !== "undefined";
+}
+
+function destroyChart(ch) {
+  try {
+    if (ch && typeof ch.destroy === "function") ch.destroy();
+  } catch {}
+}
+
+function renderDashboard() {
+  if (!els.dashboardSubtitle) return;
+  const totalSongs = state.songs.length;
+  const taggedSongs = state.songs.filter((s) => getSongTags(s).length > 0).length;
+  const sb = state.songbot;
+  const sbText = sb ? ` · songbot：库 ${sb.library.length} / 互动 ${sb.reactions.length} / 评论 ${sb.comments.length}` : "";
+  els.dashboardSubtitle.textContent = totalSongs
+    ? `共 ${totalSongs} 首 · 已打标签 ${taggedSongs} 首${sbText}`
+    : `请先导入 songs.txt 或生成 songs.json${sbText}`;
+
+  if (!ensureChartJsReady()) {
+    setTimeout(() => {
+      if (state.view === "dashboard") renderDashboard();
+    }, 250);
+    return;
+  }
+
+  if (els.chartPlaylists) {
+    const labels = state.playlists.map((p) => p.name);
+    const data = state.playlists.map((p) => p.count);
+    destroyChart(state.charts.playlists);
+    state.charts.playlists = new window.Chart(els.chartPlaylists, {
+      type: "doughnut",
+      data: { labels, datasets: [{ data, borderWidth: 1 }] },
+      options: { responsive: true, plugins: { legend: { position: "bottom", labels: { color: "#d9ddff" } } } },
+    });
+  }
+
+  const top = getTopTags(12);
+  if (els.chartTopTags) {
+    destroyChart(state.charts.topTags);
+    state.charts.topTags = new window.Chart(els.chartTopTags, {
+      type: "bar",
+      data: { labels: top.map((x) => x.tag), datasets: [{ label: "歌曲数", data: top.map((x) => x.count) }] },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+        },
+      },
+    });
+  }
+
+  if (els.chartTagRadar) {
+    const radarTop = getTopTags(8);
+    destroyChart(state.charts.tagRadar);
+    state.charts.tagRadar = new window.Chart(els.chartTagRadar, {
+      type: "radar",
+      data: { labels: radarTop.map((x) => x.tag), datasets: [{ label: "歌曲数", data: radarTop.map((x) => x.count), fill: true }] },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          r: {
+            angleLines: { color: "rgba(255,255,255,.10)" },
+            grid: { color: "rgba(255,255,255,.10)" },
+            pointLabels: { color: "#d9ddff" },
+            ticks: { color: "rgba(255,255,255,.55)", backdropColor: "transparent" },
+          },
+        },
+      },
+    });
+  }
+
+  if (els.chartWeekly) {
+    const items = Array.isArray(state.weeklyImages) ? state.weeklyImages : [];
+    destroyChart(state.charts.weekly);
+    state.charts.weekly = new window.Chart(els.chartWeekly, {
+      type: "line",
+      data: {
+        labels: items.map((x) => formatDateLabel(x.date)).reverse(),
+        datasets: [{ label: "每期", data: items.map(() => 1).reverse(), tension: 0.25 }],
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" }, suggestedMax: 2 },
+        },
+      },
+    });
+  }
+
+  if (els.chartHeatTop) {
+    const heatTop = computeSongbotHeatTop(12);
+    destroyChart(state.charts.heatTop);
+    state.charts.heatTop = new window.Chart(els.chartHeatTop, {
+      type: "bar",
+      data: { labels: heatTop.map((x) => x.label), datasets: [{ label: "互动次数", data: heatTop.map((x) => x.count) }] },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+        },
+      },
+    });
+  }
+
+  if (els.chartCommentsTop) {
+    const topC = computeSongbotCommentsTop(12);
+    destroyChart(state.charts.commentsTop);
+    state.charts.commentsTop = new window.Chart(els.chartCommentsTop, {
+      type: "bar",
+      data: { labels: topC.map((x) => x.label), datasets: [{ label: "评论数", data: topC.map((x) => x.count) }] },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+          y: { ticks: { color: "#cfd3ff" }, grid: { color: "rgba(255,255,255,.06)" } },
+        },
+      },
+    });
+  }
 }
 
 async function readFileText(file) {
