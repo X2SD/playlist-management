@@ -24,12 +24,12 @@ body{
 
 .app{
   display:grid;
-  grid-template-columns: 330px 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr;
   grid-template-areas:
-    "topbar topbar"
-    "notice notice"
-    "sidebar main";
+    "topbar"
+    "notice"
+    "main";
   min-height: 100vh;
 }
 
@@ -105,14 +105,38 @@ body{
 .topbar__actions{display:flex;gap:10px; flex-wrap:wrap; justify-content:flex-end}
 
 .sidebar{
-  grid-area: sidebar;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: min(380px, 92vw);
+  z-index: 20;
   padding:16px;
   overflow:auto;
-  border-right:1px solid var(--border);
+  border-right: 1px solid var(--border);
+  background: rgba(18, 24, 44, .96);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55);
+  transform: translateX(-105%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+}
+body.sidebar-open .sidebar{
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .sidebar-backdrop{
   display:none;
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(2px);
+}
+body.sidebar-open .sidebar-backdrop{
+  display:block;
 }
 
 .main{
@@ -500,50 +524,7 @@ body{
 }
 
 @media (max-width: 920px){
-  .app{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas:
-      "topbar"
-      "notice"
-      "main";
-    height: auto;
-  }
-  /* 小屏：侧边栏改为抽屉，避免遮挡主内容 */
-  .sidebar{
-    position: fixed;
-    left: 10px;
-    right: 10px;
-    top: 72px;
-    bottom: 14px;
-    z-index: 20;
-    border-right: none;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    background: rgba(18, 24, 44, .96);
-    box-shadow: 0 18px 50px rgba(0,0,0,.55);
-    overflow: auto;
-    transform: translateY(14px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .16s ease, transform .16s ease;
-  }
-  body.sidebar-open .sidebar{
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .sidebar-backdrop{
-    display:none;
-    position: fixed;
-    inset: 0;
-    z-index: 19;
-    background: rgba(0,0,0,.45);
-    backdrop-filter: blur(2px);
-  }
-  body.sidebar-open .sidebar-backdrop{
-    display:block;
-  }
+  .app{height:auto}
 }
 
 @media (max-width: 560px){
@@ -562,5 +543,4 @@ body{
   .nav__btn{flex: 0 0 auto}
   .main{padding: 12px}
   .notice{margin: 10px 12px 0}
-  .sidebar{top: 112px}
 }
